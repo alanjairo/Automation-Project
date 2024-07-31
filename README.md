@@ -1,5 +1,6 @@
 # User Dependencies
-Below are the dependencies need to be added into your pom.xml file into the maven project:
+Below are the dependencies need to be added into your pom.xml file into the maven project
+View as Code to copy and paste:
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 **Selenium**:
 <dependency>
