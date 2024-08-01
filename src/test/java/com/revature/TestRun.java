@@ -31,7 +31,7 @@ public class TestRun {
     public static PlanetariumStartPage startPage;
 
     @BeforeClass
-    public static void setup(){
+    public static void setup() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         startPage = new PlanetariumStartPage(driver);
@@ -39,9 +39,24 @@ public class TestRun {
     }
 
     @AfterClass
+<<<<<<< HEAD:src/test/java/com/revature/TestRun.java
     public static void teardown(){
         if(driver != null)
             driver.quit();
     }
 
+=======
+    public static void teardown() {
+        driver.quit();
+    }
+
+    public static void main(String[] args) {
+        // this is to check if you land in planetarium login
+        setup();
+        startPage.goToStartPage();
+        System.out.println(driver.getTitle());
+        teardown();
+    }
+
+>>>>>>> 14c2d45f076d9bcba8ad6e9a092541109a506bfa:src/test/java/com/revature/TestRunner.java
 }
