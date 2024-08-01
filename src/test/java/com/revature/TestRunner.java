@@ -37,8 +37,4 @@ public class TestRunner {
         teardown();
     }
 
-    private static class WebDriverWait {
-        public WebDriverWait(WebDriver driver, Duration duration) {
-        }
-    }
 }
