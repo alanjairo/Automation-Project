@@ -34,8 +34,6 @@
             <version>6.1.1</version>
             <scope>test</scope>
         </dependency>
-<<<<<<< HEAD
-=======
 
         <dependency>
             <groupId>org.xerial</groupId>
@@ -50,8 +48,6 @@
             <version>1.5.6</version>
         </dependency>
 
-
->>>>>>> 14c2d45f076d9bcba8ad6e9a092541109a506bfa
     </dependencies>
 
 </project>

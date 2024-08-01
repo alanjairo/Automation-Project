@@ -39,15 +39,9 @@ public class TestRun {
     }
 
     @AfterClass
-<<<<<<< HEAD:src/test/java/com/revature/TestRun.java
     public static void teardown(){
         if(driver != null)
             driver.quit();
-    }
-
-=======
-    public static void teardown() {
-        driver.quit();
     }
 
     public static void main(String[] args) {
@@ -58,5 +52,4 @@ public class TestRun {
         teardown();
     }
 
->>>>>>> 14c2d45f076d9bcba8ad6e9a092541109a506bfa:src/test/java/com/revature/TestRunner.java
 }
