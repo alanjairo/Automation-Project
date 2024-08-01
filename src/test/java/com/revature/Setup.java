@@ -17,7 +17,7 @@ public class Setup {
     public static Connection getConnection() throws SQLException {
         SQLiteConfig config = new SQLiteConfig();
         config.enforceForeignKeys(true);
-        String url = System.getenv("PLANETARIUMAUTO");
+        String url = System.getenv("PLANETARIUMAUTO"); // add variable to environment
         return DriverManager.getConnection(url, config.toProperties());
     }
 

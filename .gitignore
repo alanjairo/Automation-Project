@@ -36,3 +36,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### plantearium-db.db ###
+/src/test/resources/planetarium-db.db
