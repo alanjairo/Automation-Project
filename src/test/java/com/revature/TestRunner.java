@@ -17,7 +17,7 @@ public class TestRunner {
     public static PlanetariumStartPage startPage;
 
     @BeforeClass
-    public static void setup(){
+    public static void setup() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         startPage = new PlanetariumStartPage(driver);
@@ -25,7 +25,7 @@ public class TestRunner {
     }
 
     @AfterClass
-    public static void teardown(){
+    public static void teardown() {
         driver.quit();
     }
 
@@ -36,4 +36,5 @@ public class TestRunner {
         System.out.println(driver.getTitle());
         teardown();
     }
+
 }
