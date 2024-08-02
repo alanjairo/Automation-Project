@@ -1,6 +1,6 @@
 package com.revature;
 
-import com.revature.pom.PlanetariumStartPage;
+import com.revature.pom.LoginPage;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -28,13 +28,13 @@ public class TestRun {
 
     public static WebDriverWait wait;
 
-    public static PlanetariumStartPage startPage;
+    public static LoginPage startPage;
 
     @BeforeClass
     public static void setup() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        startPage = new PlanetariumStartPage(driver);
+        startPage = new LoginPage(driver);
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
@@ -44,12 +44,12 @@ public class TestRun {
             driver.quit();
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         // this is to check if you land in planetarium login
         setup();
         startPage.goToStartPage();
         System.out.println(driver.getTitle());
         teardown();
-    }
+    }*/
 
 }

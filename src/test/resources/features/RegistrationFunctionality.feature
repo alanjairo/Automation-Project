@@ -9,8 +9,13 @@ Feature: searchFunctionality
     When the user enters "<password>" in the password bar
     When the user clicks the create button
     Then the user should be prompted that an account was created
+    Then the user should exit the prompted alert
 
     Examples:
       | username                        | password                        |
-      | BatmwndenssBabiysUaiee Now!!!!  | Diddler and Joker Disagree!!!!  |
-      | Bawmeqobisaswitn awd e Now!!!!  | Rid Jokerdler and Disagree!!!!  |
+      | Ba1mwnde4wwBrbq7s16rge dow!!!!  | Diddler and Joker Disagree!!!!  |
+      | Bawmewo2isaaw3t37awdee Now!!!!  | Rid Jokerdler and Disagree!!!!  |
+      | BatmwndenwwBabisd1arge dow!!!!  | Diddler and Joker Disagree!!!!! |
+      | Bawmeqobisaswatqcawd e Now!!!!! | Rid Jokerdler and Disagree!!!!  |
+      | Bawmewo2isaaw3t37awdee Now!!!!  | Rid Jokerdler and Disagree!!!!  |
+      | Ba1mwnde4wwBrbq7s16rge3dow!!!!  | Diddler and Joker Disagree!!!!  |
