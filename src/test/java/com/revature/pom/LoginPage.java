@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class PlanetariumStartPage {
+public class LoginPage {
     private WebDriver driver;
 
     private String url = "http://localhost:8080/";
@@ -28,7 +28,15 @@ public class PlanetariumStartPage {
     @FindBy(xpath = "/html/body/div/form/input[3]")
     private WebElement loginButton;
 
-    public PlanetariumStartPage(WebDriver driver)
+
+    /*
+        This LoginPage currently holds code for part of login page (like login url)
+        but also carries code for RegistrationPage that will be made in a separate POM
+        in the future updates. LoginUrl, usernameInput and passwordInput can all be reused for
+        Login Page testing.
+    */
+
+    public LoginPage(WebDriver driver)
     {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -58,13 +66,9 @@ public class PlanetariumStartPage {
         createButton.click();
     }
 
-    public void handleAlert()
-    {
-        driver.switchTo().alert().accept();
-    }
-
     public void pressEnter()
     {
+        //not used at the moment, created for alert pop up handling
         enter.sendKeys(Keys.ENTER);
     }
 

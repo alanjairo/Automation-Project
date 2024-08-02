@@ -5,9 +5,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.Alert;
 
 public class RegistrationSteps {
+
+    public static String alertText;
 
     @Given("the user is on the Landing Page")
     public void the_user_is_on_the_Landing_Page() {
@@ -36,22 +38,51 @@ public class RegistrationSteps {
 
     @Then("the user should be prompted that an account was created")
     public void the_user_should_be_prompted_that_an_account_was_created() throws InterruptedException {
+
+        /*
+            The code here gives selenium a little bit of time to allow it to
+            interact with the alert that pops up
+        */
+
         Thread.sleep(500);
-        //boolean alert = false;
-        //if (ExpectedConditions.alertIsPresent() != null)
-        //    alert = true;
-        System.out.println(TestRun.driver.switchTo().alert().getText());
-        //Assert.assertTrue(alert);
-        TestRun.driver.switchTo().alert().accept();
+        Alert alert = TestRun.driver.switchTo().alert();
+        alertText = alert.getText();
+
+        if (alertText.contains("Account creation failed"))
+        {
+            //System.out.println(alertText);
+            Thread.sleep(500);
+            alert.dismiss();
+        }
+        else
+        {
+            //System.out.println(alertText);
+            Thread.sleep(500);
+            alert.accept();
+        }
     }
 
-    @Then("the user presses handles alert to continue")
+    @Then("the user should exit the prompted alert")
     public void the_user_presses_handles_alert_to_continue() {
-        TestRun.startPage.handleAlert();
+
+        /*
+            The code here will return true with no message
+            into Cucumber and return false with a "creation failed" message
+        */
+
+        if (alertText.contains("Account creation successfully"))
+        {
+            Assert.assertTrue("Test Prompted Account Creation Successful",alertText.contains("Account creation successfully"));
+        }
+        else if (alertText.contains("Account creation failed"))
+        {
+            Assert.fail("Test Prompted Account Creation Failed");
+        }
     }
 
     @Then("the user presses Enter to continue")
     public void the_user_presses_Enter_to_continue() {
+        //not used at the moment, tried to use for the alert handling
         TestRun.startPage.pressEnter();
     }
 }
