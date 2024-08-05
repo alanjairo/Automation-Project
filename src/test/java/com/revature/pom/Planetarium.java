@@ -16,7 +16,7 @@ public class Planetarium {
 
     private String validPlanetImage = "src\\test\\resources\\Celestial-Images\\planet-1.jpg";
     
-    private String validMoonImage = "C:\\Users\\isles\\Desktop\\study\\Revature\\p2\\Automation-Project\\src\\test\\resources\\Celestial-Images\\moon-1.jpg";
+    private String validMoonImage = "src\\test\\resources\\Celestial-Images\\moon-1.jpg";
 
 
     private WebElement enter;
