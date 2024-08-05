@@ -41,3 +41,5 @@ build/
 ### plantearium-db.db ###
 !**/src/test/resources/planetarium-db.db
 
+### pom.xml ###
+pom.xml
