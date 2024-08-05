@@ -39,5 +39,5 @@ build/
 .DS_Store
 
 ### plantearium-db.db ###
-/src/test/resources/planetarium-db.db
+!**/src/test/resources/planetarium-db.db
 
