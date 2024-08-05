@@ -10,6 +10,7 @@ public class LoginPage {
     private WebDriver driver;
 
     private String url = "http://localhost:8080/";
+    private  String planetarium ="http://localhost:8080/planetarium";
 
     private WebElement enter;
 
@@ -76,5 +77,6 @@ public class LoginPage {
     {
         loginButton.click();
     }
+    public  void viewPlanetarium(){driver.get(planetarium);}
 
 }
