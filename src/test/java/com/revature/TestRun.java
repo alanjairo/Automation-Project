@@ -1,6 +1,7 @@
 package com.revature;
 
 import com.revature.pom.LoginPage;
+import com.revature.pom.RegPage;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -30,11 +31,14 @@ public class TestRun {
 
     public static LoginPage startPage;
 
+    public static RegPage regPage;
+
     @BeforeClass
     public static void setup() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         startPage = new LoginPage(driver);
+        regPage = new RegPage(driver);
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
