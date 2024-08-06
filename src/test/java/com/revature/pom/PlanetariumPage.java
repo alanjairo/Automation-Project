@@ -1,25 +1,33 @@
 package com.revature.pom;
 
 import java.io.File;
+import java.time.Duration;
+import java.util.List;
+import java.util.NoSuchElementException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PlanetariumPage {
     private WebDriver driver;
 
     private String url = "http://localhost:8080/planetarium";
 
-    private String validPlanetImage = "src\\test\\resources\\Celestial-Images\\planet-1.jpg";
+    // private String planetImage = "src\\test\\resources\\Celestial-Images\\planet-1.jpg";
     
-    private String validMoonImage = "src\\test\\resources\\Celestial-Images\\moon-1.jpg";
+    // private String moonImageFilename = "src\\test\\resources\\Celestial-Images\\moon-1.jpg";
 
 
     private WebElement enter;
+
+    private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
     // select planet or moon
     @FindBy(id = "locationSelect")
@@ -55,6 +63,9 @@ public class PlanetariumPage {
     @FindBy(xpath = "//*[@id=\"inputContainer\"]/button")
     private WebElement submitMoonButton;
 
+    @FindBy(id = "celestialTable")
+    private WebElement celestialTable;
+
     // page prep
     public PlanetariumPage(WebDriver driver) {
         this.driver = driver;
@@ -76,14 +87,27 @@ public class PlanetariumPage {
         planetNameInput.sendKeys(input);
     }
 
-    public void provideValidImage() {
-        File imageFile = new File(validPlanetImage);
+    public void provideValidPlanetImage(String planetImage) {
+        File imageFile = new File(planetImage);
         String absolutePath = imageFile.getAbsolutePath();
         planetImageInput.sendKeys(absolutePath);
     }
 
     public void clickSubmitPlanetButton() {
         submitPlanetButton.click();
+    }
+
+    public boolean verifyPlanetAdded(String planetName) {
+        wait.until(ExpectedConditions.visibilityOf(celestialTable));
+        
+        String xpathExpression = ".//tr/td[3][text()='" + planetName + "']";
+
+        try {
+            WebElement cell = celestialTable.findElement(By.xpath(xpathExpression));
+            return cell != null;
+        } catch (NoSuchElementException ex) {
+            return false;
+        }
     }
 
     // moon actions
@@ -97,8 +121,8 @@ public class PlanetariumPage {
         moonNameInput.sendKeys(input);
     }
 
-    public void provideValidMoonImage() {
-        File imageFile = new File(validMoonImage);
+    public void provideValidMoonImage(String moonImage) {
+        File imageFile = new File(moonImage);
         String absolutePath = imageFile.getAbsolutePath();
         moonImageInput.sendKeys(absolutePath);
     }

@@ -1,0 +1,1307 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-06T19:21:49.148Z",
+        "line": 16,
+        "name": "As a User I want to add a planet to the planetarium so that I can expand the collection of celestial bodies",
+        "description": "  Add Planet functionality System Test for Planetarium Application",
+        "id": "add-planet-functionality;as-a-user-i-want-to-add-a-planet-to-the-planetarium-so-that-i-can-expand-the-collection-of-celestial-bodies;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 471108800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.user_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 53209000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is on the Planetarium Page",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_is_on_the_Planetarium_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#locationSelect\"}\n  (Session info: chrome\u003d127.0.6533.89)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002721.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [74404cb3dc066deb3fb0c087802cdb98, findElement {using\u003did, value\u003dlocationSelect}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\isles\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65194/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 74404cb3dc066deb3fb0c087802cdb98\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)\r\n\tat com.revature.pom.PlanetariumPage.selectPlanetFromDropdown(PlanetariumPage.java:80)\r\n\tat com.revature.step.AddPlanetSteps.the_user_selects_planet_from_the_dropdown(AddPlanetSteps.java:27)\r\n\tat ✽.the user selects planet from the dropdown(classpath:features/AddPlanetFunctionality.feature:8)\r\n",
+              "duration": 2065059700,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "the user selects planet from the dropdown",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_selects_planet_from_the_dropdown()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1003700,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "the user enters \"Planet1\" in the planet name input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet1\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_enters_in_the_planet_name_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "the user chooses \"src/test/resources/Celestial-Images/planet-1.jpg\" for the planet image input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"src/test/resources/Celestial-Images/planet-1.jpg\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_chooses_for_the_planet_image_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "the user clicks the Submit Planet button",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_clicks_the_Submit_Planet_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "a planet named \"Planet1\" should be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet1\"",
+                  "offset": 15
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.a_planet_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanetFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-06T19:21:51.857Z",
+        "line": 17,
+        "name": "As a User I want to add a planet to the planetarium so that I can expand the collection of celestial bodies",
+        "description": "  Add Planet functionality System Test for Planetarium Application",
+        "id": "add-planet-functionality;as-a-user-i-want-to-add-a-planet-to-the-planetarium-so-that-i-can-expand-the-collection-of-celestial-bodies;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 431304700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.user_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 86133200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is on the Planetarium Page",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_is_on_the_Planetarium_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 513681000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user selects planet from the dropdown",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_selects_planet_from_the_dropdown()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 147608100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Planet2\" in the planet name input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet2\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_enters_in_the_planet_name_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 44820700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user chooses \"src/test/resources/Celestial-Images/planet-2.jpg\" for the planet image input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"src/test/resources/Celestial-Images/planet-2.jpg\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_chooses_for_the_planet_image_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 62106300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks the Submit Planet button",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_clicks_the_Submit_Planet_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"td[1]\"}\n  (Session info: chrome\u003d127.0.6533.89)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002721.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [74404cb3dc066deb3fb0c087802cdb98, findChildElement {id\u003df.15235D1A3FBD9EEBC6D47810C7E1D2CF.d.2F880B116B8C76D58B8A190FB295A53F.e.51, value\u003dtd[1], using\u003dxpath}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\isles\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65194/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 74404cb3dc066deb3fb0c087802cdb98\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:211)\r\n\tat com.revature.pom.PlanetariumPage.verifyPlanetAdded(PlanetariumPage.java:106)\r\n\tat com.revature.step.AddPlanetSteps.a_planet_should_be_added_to_the_planetarium(AddPlanetSteps.java:47)\r\n\tat ✽.a planet named \"Planet2\" should be added to the planetarium(classpath:features/AddPlanetFunctionality.feature:12)\r\n",
+              "duration": 2138346500,
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "a planet named \"Planet2\" should be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet2\"",
+                  "offset": 15
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.a_planet_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanetFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-06T19:21:55.301Z",
+        "line": 18,
+        "name": "As a User I want to add a planet to the planetarium so that I can expand the collection of celestial bodies",
+        "description": "  Add Planet functionality System Test for Planetarium Application",
+        "id": "add-planet-functionality;as-a-user-i-want-to-add-a-planet-to-the-planetarium-so-that-i-can-expand-the-collection-of-celestial-bodies;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 402867800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.user_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 66910800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is on the Planetarium Page",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_is_on_the_Planetarium_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 492973400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user selects planet from the dropdown",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_selects_planet_from_the_dropdown()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 143774900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Planet3\" in the planet name input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet3\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_enters_in_the_planet_name_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51112200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user chooses \"src/test/resources/Celestial-Images/planet-3.jpg\" for the planet image input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"src/test/resources/Celestial-Images/planet-3.jpg\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_chooses_for_the_planet_image_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 75838000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks the Submit Planet button",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_clicks_the_Submit_Planet_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"td[1]\"}\n  (Session info: chrome\u003d127.0.6533.89)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002721.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [74404cb3dc066deb3fb0c087802cdb98, findChildElement {id\u003df.15235D1A3FBD9EEBC6D47810C7E1D2CF.d.4D60D9183AC29C38DE3E3BC6A762F32F.e.95, value\u003dtd[1], using\u003dxpath}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\isles\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65194/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 74404cb3dc066deb3fb0c087802cdb98\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:211)\r\n\tat com.revature.pom.PlanetariumPage.verifyPlanetAdded(PlanetariumPage.java:106)\r\n\tat com.revature.step.AddPlanetSteps.a_planet_should_be_added_to_the_planetarium(AddPlanetSteps.java:47)\r\n\tat ✽.a planet named \"Planet3\" should be added to the planetarium(classpath:features/AddPlanetFunctionality.feature:12)\r\n",
+              "duration": 2146096100,
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "a planet named \"Planet3\" should be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet3\"",
+                  "offset": 15
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.a_planet_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanetFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-06T19:21:58.699Z",
+        "line": 19,
+        "name": "As a User I want to add a planet to the planetarium so that I can expand the collection of celestial bodies",
+        "description": "  Add Planet functionality System Test for Planetarium Application",
+        "id": "add-planet-functionality;as-a-user-i-want-to-add-a-planet-to-the-planetarium-so-that-i-can-expand-the-collection-of-celestial-bodies;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 431630000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.user_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 45885700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is on the Planetarium Page",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_is_on_the_Planetarium_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 473949500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user selects planet from the dropdown",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_selects_planet_from_the_dropdown()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 152860000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Planet4\" in the planet name input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet4\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_enters_in_the_planet_name_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 41504100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user chooses \"src/test/resources/Celestial-Images/planet-4.jpg\" for the planet image input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"src/test/resources/Celestial-Images/planet-4.jpg\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_chooses_for_the_planet_image_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 57673300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks the Submit Planet button",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_clicks_the_Submit_Planet_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"td[1]\"}\n  (Session info: chrome\u003d127.0.6533.89)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002721.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [74404cb3dc066deb3fb0c087802cdb98, findChildElement {id\u003df.15235D1A3FBD9EEBC6D47810C7E1D2CF.d.7BA9AAEA84995EE4CED620678A65C55E.e.137, value\u003dtd[1], using\u003dxpath}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\isles\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65194/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 74404cb3dc066deb3fb0c087802cdb98\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:211)\r\n\tat com.revature.pom.PlanetariumPage.verifyPlanetAdded(PlanetariumPage.java:106)\r\n\tat com.revature.step.AddPlanetSteps.a_planet_should_be_added_to_the_planetarium(AddPlanetSteps.java:47)\r\n\tat ✽.a planet named \"Planet4\" should be added to the planetarium(classpath:features/AddPlanetFunctionality.feature:12)\r\n",
+              "duration": 2109615200,
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "a planet named \"Planet4\" should be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet4\"",
+                  "offset": 15
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.a_planet_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanetFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-06T19:22:02.032Z",
+        "line": 20,
+        "name": "As a User I want to add a planet to the planetarium so that I can expand the collection of celestial bodies",
+        "description": "  Add Planet functionality System Test for Planetarium Application",
+        "id": "add-planet-functionality;as-a-user-i-want-to-add-a-planet-to-the-planetarium-so-that-i-can-expand-the-collection-of-celestial-bodies;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 371092800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.user_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 63108700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is on the Planetarium Page",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_is_on_the_Planetarium_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 455713600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user selects planet from the dropdown",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_selects_planet_from_the_dropdown()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 149905700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Planet5\" in the planet name input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet5\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_enters_in_the_planet_name_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51887400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user chooses \"src/test/resources/Celestial-Images/planet-5.jpg\" for the planet image input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"src/test/resources/Celestial-Images/planet-5.jpg\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_chooses_for_the_planet_image_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 72008700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user clicks the Submit Planet button",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_clicks_the_Submit_Planet_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"td[1]\"}\n  (Session info: chrome\u003d127.0.6533.89)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002721.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [74404cb3dc066deb3fb0c087802cdb98, findChildElement {id\u003df.15235D1A3FBD9EEBC6D47810C7E1D2CF.d.04322BB4D1DE33EDC0E0CDDEF5207FA3.e.182, value\u003dtd[1], using\u003dxpath}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\isles\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65194/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 74404cb3dc066deb3fb0c087802cdb98\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:211)\r\n\tat com.revature.pom.PlanetariumPage.verifyPlanetAdded(PlanetariumPage.java:106)\r\n\tat com.revature.step.AddPlanetSteps.a_planet_should_be_added_to_the_planetarium(AddPlanetSteps.java:47)\r\n\tat ✽.a planet named \"Planet5\" should be added to the planetarium(classpath:features/AddPlanetFunctionality.feature:12)\r\n",
+              "duration": 2144347500,
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "a planet named \"Planet5\" should be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet5\"",
+                  "offset": 15
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.a_planet_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanetFunctionality"
+          }
+        ]
+      }
+    ],
+    "name": "Add Planet Functionality",
+    "description": "",
+    "id": "add-planet-functionality",
+    "keyword": "Feature",
+    "uri": "classpath:features/AddPlanetFunctionality.feature",
+    "tags": [
+      {
+        "name": "@AddPlanetFunctionality",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-06T19:22:05.366Z",
+        "line": 16,
+        "name": "As a User I want to register an account into the Planetarium Application",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registration-functionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 96922900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 190207700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 306380800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user enters \"Ba1mwnde4wwBrbq7s16rge dow!!!!\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ba1mwnde4wwBrbq7s16rge dow!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 312309400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Diddler and Joker Disagree!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Diddler and Joker Disagree!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 60822700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1023347900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should be prompted that an account was created",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 999100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user should exit the prompted alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-06T19:22:07.385Z",
+        "line": 17,
+        "name": "As a User I want to register an account into the Planetarium Application",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registration-functionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 94369400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 133451700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 293410300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user enters \"Bawmewo2isaaw3t37awdee Now!!!!\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bawmewo2isaaw3t37awdee Now!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 341717100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Rid Jokerdler and Disagree!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Rid Jokerdler and Disagree!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 117990500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1031530200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should be prompted that an account was created",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user should exit the prompted alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-06T19:22:09.424Z",
+        "line": 18,
+        "name": "As a User I want to register an account into the Planetarium Application",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registration-functionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 85824400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 111075400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 277778900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user enters \"BatmwndenwwBabisd1arge dow!!!!\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BatmwndenwwBabisd1arge dow!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 389061300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Diddler and Joker Disagree!!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Diddler and Joker Disagree!!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 55113500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1020717000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should be prompted that an account was created",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Test Prompted Account Creation Failed\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue(RegistrationSteps.java:79)\r\n\tat ✽.the user should exit the prompted alert(classpath:features/RegistrationFunctionality.feature:12)\r\n",
+              "duration": 1995400,
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "the user should exit the prompted alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-06T19:22:11.384Z",
+        "line": 19,
+        "name": "As a User I want to register an account into the Planetarium Application",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registration-functionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 62655700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 109760200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 173226300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user enters \"Bawmeqobisaswatqcawd e Now!!!!!\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bawmeqobisaswatqcawd e Now!!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 147609700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Rid Jokerdler and Disagree!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Rid Jokerdler and Disagree!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 57412600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1029510900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should be prompted that an account was created",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Test Prompted Account Creation Failed\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue(RegistrationSteps.java:79)\r\n\tat ✽.the user should exit the prompted alert(classpath:features/RegistrationFunctionality.feature:12)\r\n",
+              "duration": 1179100,
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "the user should exit the prompted alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-06T19:22:12.993Z",
+        "line": 20,
+        "name": "As a User I want to register an account into the Planetarium Application",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registration-functionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 96884900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 97058500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 159156100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user enters \"Bawmewo2isaaw3t37awdee Now!!!!\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bawmewo2isaaw3t37awdee Now!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 146408200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Rid Jokerdler and Disagree!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Rid Jokerdler and Disagree!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 56224400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1018019000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should be prompted that an account was created",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Test Prompted Account Creation Failed\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue(RegistrationSteps.java:79)\r\n\tat ✽.the user should exit the prompted alert(classpath:features/RegistrationFunctionality.feature:12)\r\n",
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "the user should exit the prompted alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-06T19:22:14.583Z",
+        "line": 21,
+        "name": "As a User I want to register an account into the Planetarium Application",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registration-functionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 89210100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 204304200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 260492700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user enters \"Ba1mwnde4wwBrbq7s16rge3dow!!!!\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ba1mwnde4wwBrbq7s16rge3dow!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 144086300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Diddler and Joker Disagree!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Diddler and Joker Disagree!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 50215900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1022808500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should be prompted that an account was created",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 994800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user should exit the prompted alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      }
+    ],
+    "name": "Registration Functionality",
+    "description": "",
+    "id": "registration-functionality",
+    "keyword": "Feature",
+    "uri": "classpath:features/RegistrationFunctionality.feature",
+    "tags": [
+      {
+        "name": "@RegistrationFunctionality",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
