@@ -117,10 +117,10 @@ public class PlanetariumPage {
     }
 
     public void clickDeleteButton() {
-
+        deleteButton.click();
     }
 
-    public void sendDeletionInput(String string) {
-
+    public void sendDeletionInput(String input) {
+        deleteInput.sendKeys(input);
     }
 }

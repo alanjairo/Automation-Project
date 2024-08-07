@@ -5,29 +5,19 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.Alert;
 
 public class MoonDeletionSteps {
 
     public static String alertText;
 
-    @Given("the user is on the Landing Page")
-    public void the_user_is_on_the_Landing_Page() {
+    @Given("the user is logged in with {string} and {string}")
+    public void user_logged_in(String s1, String s2)
+    {
         TestRun.startPage.goToStartPage();
+        TestRun.startPage.sendUsernameInput(s1);
+        TestRun.startPage.sendPasswordInput(s2);
+        TestRun.startPage.clickLoginButton();
     }
-
-    @When("the user enters {string} in the username bar")
-    public void the_user_enters_in_the_username_bar(String string) {
-        TestRun.startPage.sendUsernameInput(string);
-    }
-
-    @When("the user enters {string} in the password bar")
-    public void the_user_enters_in_the_password_bar(String string) {
-        TestRun.startPage.sendPasswordInput(string);
-    }
-
-    @When("the user clicks login")
-    public void the_user_clicks_login() { TestRun.startPage.clickLoginButton();}
 
     @When("the user enters {string} in the moon deletion bar")
     public void the_user_enters_in_the_moon_deletion_bar(String string) { TestRun.planetariumPage.sendDeletionInput(string);}
@@ -37,34 +27,8 @@ public class MoonDeletionSteps {
         TestRun.planetariumPage.clickDeleteButton();
     }
 
-    @Then("the user should be prompted that a moon was deleted")
-    public void the_user_should_be_prompted_that_an_account_was_created() throws InterruptedException {
-
-        /*
-            The code here gives selenium a little bit of time to allow it to
-            interact with the alert that pops up
-        */
-
-        Thread.sleep(500);
-        Alert alert = TestRun.driver.switchTo().alert();
-        alertText = alert.getText();
-
-        if (alertText.contains("Failed to delete moon with name"))
-        {
-            //System.out.println(alertText);
-            Thread.sleep(500);
-            alert.dismiss();
-        }
-        else
-        {
-            //System.out.println(alertText);
-            Thread.sleep(500);
-            alert.accept();
-        }
-    }
-
-    @Then("the user should exit the prompted alert")
-    public void the_user_presses_handles_alert_to_continue() {
+    @Then("the moon was deleted")
+    public void the_moon_was_deleted() {
 
         /*
             The code here will return true with no message

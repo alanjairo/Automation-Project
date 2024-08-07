@@ -6,10 +6,9 @@ Feature: searchFunctionality
     When the user enters "<username>" in the username bar
     When the user enters "<password>" in the password bar
     When the user clicks the login button
-    When the user enters "moon_name" in the moon deletion bar
+    When the user enters "<moon_name>" in the moon deletion bar
     When the user clicks the delete button
-    Then the user should be prompted that a moon was deleted
-    Then the user should exit the prompted alert
+    Then the moon was deleted
     Examples:
       | username | password | moon_name |
       | Batman!| I am the night! | Luna |
