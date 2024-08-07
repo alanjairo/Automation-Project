@@ -145,6 +145,24 @@ public class PlanetariumPage {
         enter.sendKeys(Keys.ENTER);
     }
 
+    public boolean verifyMoonExists(String moonName) {
+        wait.until(ExpectedConditions.visibilityOf(celestialTable));
+
+
+        try {
+            String xpathExpression = ".//tr/td[3][text()='" + moonName + "']";
+            WebElement cell = celestialTable.findElement(By.xpath(xpathExpression));
+
+            WebElement secondPrecedingSibling = cell.findElement(By.xpath("preceding-sibling::td[2]"));
+            String secondPrecedingSiblingText = secondPrecedingSibling.getText();
+
+            return secondPrecedingSiblingText != null && secondPrecedingSiblingText.equals("moon");
+
+        } catch (NoSuchElementException ex) {
+            return false;
+        }
+    }
+
     public void clickDeleteButton() {
         deleteButton.click();
     }
