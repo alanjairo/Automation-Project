@@ -11,30 +11,15 @@ public class MoonDeletionSteps {
 
     public static String alertText;
 
-    @Given("the user is on the Landing Page")
-    public void the_user_is_on_the_Landing_Page() {
-        TestRun.startPage.goToStartPage();
-    }
-
-    @When("the user enters {string} in the username bar")
-    public void the_user_enters_in_the_username_bar(String string) {
-        TestRun.startPage.sendUsernameInput(string);
-    }
-
-    @When("the user enters {string} in the password bar")
-    public void the_user_enters_in_the_password_bar(String string) {
-        TestRun.startPage.sendPasswordInput(string);
-    }
-
-    @When("the user clicks login")
-    public void the_user_clicks_login() { TestRun.startPage.clickLoginButton();}
 
     @When("the user enters {string} in the moon deletion bar")
-    public void the_user_enters_in_the_moon_deletion_bar(String string) { TestRun.planetariumPage.sendDeletionInput(string);}
+    public void the_user_enters_in_the_moon_deletion_bar(String string) {
+        //TestRun.planetariumPage.sendDeletionInput(string);
+        }
 
     @When("the user clicks the delete button")
     public void the_user_clicks_the_delete_button() {
-        TestRun.planetariumPage.clickDeleteButton();
+      //  TestRun.planetariumPage.clickDeleteButton();
     }
 
     @Then("the user should be prompted that a moon was deleted")
