@@ -9,7 +9,7 @@ Feature: PlanetDeletion
 		And The user selects the planet dropdown
 		When The user provide valid name "<Name>"
 		And The user clicks the delete button
-		Then The Planetarium web app should alert that the planet has been deleted
+		Then The Planetarium web app should alert that "<Name>" has been deleted
 
 	Examples: 
 		| Name  |

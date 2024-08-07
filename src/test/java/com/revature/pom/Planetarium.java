@@ -1,6 +1,7 @@
 package com.revature.pom;
 
 import java.io.File;
+import java.util.List;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +25,9 @@ public class Planetarium {
     // select planet or moon
     @FindBy(id = "locationSelect")
     private WebElement locationSelect;
+
+    @FindBy(xpath = "//*[@id=\"celestialTable\"]//td[3]") //should grab the planet or moon names from table
+    private List<WebElement> celestialTable;
 
     // deletion interactions
     @FindBy(id = "deleteInput")
@@ -122,6 +126,16 @@ public class Planetarium {
     // handle pop up (temp)
     public void pressEnter() {
         enter.sendKeys(Keys.ENTER);
+    }
+
+    // check if celestial body present
+    public boolean checkForCelestialBody(String body) {
+        for (WebElement celestialBody : celestialTable) {
+            if(celestialBody.getText().equals(body)){
+                return true;
+            }
+        }
+        return false;
     }
 
 }
