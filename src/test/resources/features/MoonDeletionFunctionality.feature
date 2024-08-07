@@ -1,5 +1,5 @@
 @MoonDeletionFunctionality
-Feature: searchFunctionality
+Feature: moonDeletionFeature
   Scenario Outline: As a User I want to login with an account into the Planetarium Application and then delete a moon
   Moon Deletion functionality System Test for Planetarium Application
     Given the user is on the Landing Page
