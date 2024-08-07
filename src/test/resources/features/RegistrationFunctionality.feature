@@ -1,5 +1,5 @@
 @RegistrationFunctionality
-Feature: searchFunctionality
+Feature: Registration Functionality
 
   Scenario Outline: As a User I want to register an account into the Planetarium Application
   User Registration functionality System Test for Planetarium Application

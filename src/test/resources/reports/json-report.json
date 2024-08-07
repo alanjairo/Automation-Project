@@ -1,0 +1,334 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2031200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.user_is_logged_in()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T00:00:58.303Z",
+        "before": [
+          {
+            "result": {
+              "duration": 478615100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "As a User I want to add a planet to the planetarium so that I can expand the collection of celestial bodies",
+        "description": "    Add Planet functionality System Test for Planetarium Application",
+        "id": "add-planet-functionality;as-a-user-i-want-to-add-a-planet-to-the-planetarium-so-that-i-can-expand-the-collection-of-celestial-bodies;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 68302300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user is on the Planetarium Page",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_is_on_the_Planetarium_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2147016100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "planet \"Planet1\" does not exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet1\"",
+                  "offset": 7
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_planet_does_not_exist(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 288472400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user selects planet from the dropdown",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_selects_planet_from_the_dropdown()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 137835800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user enters \"Planet1\" in the planet name input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet1\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_enters_in_the_planet_name_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 52864900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user chooses \"src/test/resources/Celestial-Images/planet-1.jpg\" for the planet image input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"src/test/resources/Celestial-Images/planet-1.jpg\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_chooses_for_the_planet_image_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 70004700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user clicks the Submit Planet button",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_clicks_the_Submit_Planet_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 172358900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "a planet named \"Planet1\" should be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet1\"",
+                  "offset": 15
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.a_planet_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanetFunctionality"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1006300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.user_is_logged_in()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T00:01:01.821Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1997600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "As a User I want to add a planet to the planetarium so that I can expand the collection of celestial bodies",
+        "description": "    Add Planet functionality System Test for Planetarium Application",
+        "id": "add-planet-functionality;as-a-user-i-want-to-add-a-planet-to-the-planetarium-so-that-i-can-expand-the-collection-of-celestial-bodies;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 38635900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user is on the Planetarium Page",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_is_on_the_Planetarium_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2131642900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "planet \"Planet2\" does not exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet2\"",
+                  "offset": 7
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_planet_does_not_exist(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 741407900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user selects planet from the dropdown",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_selects_planet_from_the_dropdown()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 287919400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user enters \"Planet2\" in the planet name input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet2\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_enters_in_the_planet_name_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 41440800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user chooses \"src/test/resources/Celestial-Images/planet-2.jpg\" for the planet image input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"src/test/resources/Celestial-Images/planet-2.jpg\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_chooses_for_the_planet_image_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 58289400,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user clicks the Submit Planet button",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_clicks_the_Submit_Planet_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 155487200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "a planet named \"Planet2\" should be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet2\"",
+                  "offset": 15
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.a_planet_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanetFunctionality"
+          }
+        ]
+      }
+    ],
+    "name": "Add Planet Functionality",
+    "description": "",
+    "id": "add-planet-functionality",
+    "keyword": "Feature",
+    "uri": "classpath:features/AddPlanetFunctionality.feature",
+    "tags": [
+      {
+        "name": "@AddPlanetFunctionality",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
