@@ -18,7 +18,6 @@ create table users(
 
 insert into users (username, password) values ('Batman', 'I am the night');
 insert into users (username, password) values ('user1', 'password');
-insert into users (username, password) values ('injected by script', 'password');
 
 create table planets(
 	id integer primary key,

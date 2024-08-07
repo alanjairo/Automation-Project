@@ -20,10 +20,11 @@ public class PlanetariumPage {
 
     private String url = "http://localhost:8080/planetarium";
 
-    // private String planetImage = "src\\test\\resources\\Celestial-Images\\planet-1.jpg";
-    
-    // private String moonImageFilename = "src\\test\\resources\\Celestial-Images\\moon-1.jpg";
+    // private String planetImage =
+    // "src\\test\\resources\\Celestial-Images\\planet-1.jpg";
 
+    // private String moonImageFilename =
+    // "src\\test\\resources\\Celestial-Images\\moon-1.jpg";
 
     private WebElement enter;
 
@@ -97,15 +98,20 @@ public class PlanetariumPage {
         submitPlanetButton.click();
     }
 
-    public boolean verifyPlanetAdded(String planetName) {
+    public boolean verifyPlanetExists(String planetName) {
         wait.until(ExpectedConditions.visibilityOf(celestialTable));
-        
-        String xpathExpression = ".//tr/td[3][text()='" + planetName + "']";
 
+        
         try {
+            String xpathExpression = ".//tr/td[3][text()='" + planetName + "']";
             WebElement cell = celestialTable.findElement(By.xpath(xpathExpression));
-            return cell != null;
-        } catch (NoSuchElementException ex) {
+
+            WebElement secondPrecedingSibling = cell.findElement(By.xpath("preceding-sibling::td[2]"));
+            String secondPrecedingSiblingText = secondPrecedingSibling.getText();
+
+            return secondPrecedingSiblingText != null && secondPrecedingSiblingText.equals("planet");
+
+        } catch (org.openqa.selenium.NoSuchElementException ex) {
             return false;
         }
     }

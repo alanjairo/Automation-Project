@@ -1,7 +1,11 @@
 package com.revature.step;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import com.revature.TestRun;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,17 +13,33 @@ import io.cucumber.java.en.When;
 public class AddPlanetSteps {
     public static String alertText; // placeholder
 
+    private static boolean isLoggedIn = false;
+
+    @Before
+    public void ensureLoggedIn() {
+        if (!isLoggedIn) {
+            TestRun.startPage.goToStartPage();
+            TestRun.startPage.sendUsernameInput("user1");
+            TestRun.startPage.sendPasswordInput("password");
+            TestRun.startPage.clickLoginButton();
+            isLoggedIn = true;
+        }
+    }
+
     @Given("the user is logged in")
-    public void user_logged_in() {
-        TestRun.startPage.goToStartPage();
-        TestRun.startPage.sendUsernameInput("user1");
-        TestRun.startPage.sendPasswordInput("password");
-        TestRun.startPage.clickLoginButton();
+    public void user_is_logged_in() {
+        // handled in Before
     }
 
     @Given("the user is on the Planetarium Page")
     public void the_user_is_on_the_Planetarium_Page() {
         TestRun.planetariumPage.goToHomePage();
+    }
+
+    @Given("planet {string} does not exist")
+    public void the_planet_does_not_exist(String string) {
+        boolean planetDoesNotExist = TestRun.planetariumPage.verifyPlanetExists(string);
+        assertFalse("Planet " + string + " should not exist", planetDoesNotExist);
     }
 
     @When("the user selects planet from the dropdown")
@@ -44,7 +64,8 @@ public class AddPlanetSteps {
 
     @Then("a planet named {string} should be added to the planetarium")
     public void a_planet_should_be_added_to_the_planetarium(String string) {
-        TestRun.planetariumPage.verifyPlanetAdded(string);
+        boolean planetExists = TestRun.planetariumPage.verifyPlanetExists(string);
+        assertTrue("The planet should be added", planetExists);
     }
 
 }
