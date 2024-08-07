@@ -145,4 +145,11 @@ public class PlanetariumPage {
         enter.sendKeys(Keys.ENTER);
     }
 
+    public void clickDeleteButton() {
+        deleteButton.click();
+    }
+
+    public void sendDeletionInput(String input) {
+        deleteInput.sendKeys(input);
+    }
 }
