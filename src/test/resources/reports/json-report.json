@@ -3,6 +3,177 @@
     "line": 2,
     "elements": [
       {
+        "start_timestamp": "2024-08-07T21:50:13.087Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1323389600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "As a User I want to add moons into the Planetarium Application",
+        "description": "  User Add Moons functionality System Test for Planetarium Application",
+        "id": "addmoonsfunctionality;as-a-user-i-want-to-add-moons-into-the-planetarium-application;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 301554300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is logged in with \"Batman\" and \"I am the night\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"I am the night\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.user_logged_in(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 793934600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user selects planet on the dropdown menu",
+            "match": {
+              "location": "com.revature.step.AddMoonSteps.the_user_selects_planet_on_the_dropdown_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 407996300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user selects moon on the dropdown menu",
+            "match": {
+              "location": "com.revature.step.AddMoonSteps.the_user_selects_moon_on_the_dropdown_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 92641000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Noom\" in the moon name bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Noom\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_user_enters_in_the_moon_name_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 86104400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user enters \"1\" in the orbited planet id bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_user_enters_in_the_orbited_planet_id_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : C:\\Users\\Proto\\Desktop\\Automation-Project\\src\\test\\resources\\Celestial-Images\\moon-1.jpg\n  (Session info: chrome\u003d127.0.6533.89)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.10\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [9afe510728259863a80500ce2eb72114, sendKeysToElement {value\u003d[Ljava.lang.CharSequence;@656d10a4, id\u003df.2824F4613F19B0E3E692AC226D23DAFC.d.419D50367BA368016657EED4F7CA2750.e.45}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\foruk\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59519}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59519/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nElement: [[ChromeDriver: chrome on windows (9afe510728259863a80500ce2eb72114)] -\u003e id: moonImageInput]\nSession ID: 9afe510728259863a80500ce2eb72114\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)\r\n\tat com.revature.pom.PlanetariumPage.provideValidMoonImage(PlanetariumPage.java:132)\r\n\tat com.revature.step.AddMoonSteps.the_user_adds_in_the_add_image_file_button(AddMoonSteps.java:32)\r\n\tat ✽.the user adds \"C:\\Users\\Proto\\Desktop\\Automation-Project\\src\\test\\resources\\Celestial-Images\\moon-1.jpg\" in the add image file button(classpath:features/AddMoonsFunctionality.feature:11)\r\n",
+              "duration": 93146300,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "the user adds \"C:\\Users\\Proto\\Desktop\\Automation-Project\\src\\test\\resources\\Celestial-Images\\moon-1.jpg\" in the add image file button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"C:\\Users\\Proto\\Desktop\\Automation-Project\\src\\test\\resources\\Celestial-Images\\moon-1.jpg\"",
+                  "offset": 14
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_user_adds_in_the_add_image_file_button(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1012500,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "the user clicks submit moon button",
+            "match": {
+              "location": "com.revature.step.AddMoonSteps.the_user_clicks_submit_moon_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "the user is displayed with a new moon with the correct inputs",
+            "match": {
+              "location": "com.revature.step.AddMoonSteps.the_user_is_displayed_with_a_new_moon_with_the_correct_inputs()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddMoonsFunctionality"
+          }
+        ]
+      }
+    ],
+    "name": "addMoonsFunctionality",
+    "description": "",
+    "id": "addmoonsfunctionality",
+    "keyword": "Feature",
+    "uri": "classpath:features/AddMoonsFunctionality.feature",
+    "tags": [
+      {
+        "name": "@AddMoonsFunctionality",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
         "line": 4,
         "name": "",
         "description": "",
@@ -11,24 +182,23 @@
         "steps": [
           {
             "result": {
-              "duration": 2031200,
+              "duration": 24520100,
               "status": "passed"
             },
             "line": 5,
             "name": "the user is logged in",
             "match": {
-              "location": "com.revature.step.AddPlanetSteps.user_is_logged_in()"
+              "location": "com.revature.step.RegistrationSteps.logged_in()"
             },
             "keyword": "Given "
           }
         ]
       },
       {
-        "start_timestamp": "2024-08-07T00:00:58.303Z",
+        "start_timestamp": "2024-08-07T21:50:16.376Z",
         "before": [
           {
             "result": {
-              "duration": 478615100,
               "status": "passed"
             },
             "match": {
@@ -45,7 +215,7 @@
         "steps": [
           {
             "result": {
-              "duration": 68302300,
+              "duration": 92601800,
               "status": "passed"
             },
             "line": 9,
@@ -57,7 +227,7 @@
           },
           {
             "result": {
-              "duration": 2147016100,
+              "duration": 2106643400,
               "status": "passed"
             },
             "line": 10,
@@ -75,7 +245,7 @@
           },
           {
             "result": {
-              "duration": 288472400,
+              "duration": 200170900,
               "status": "passed"
             },
             "line": 11,
@@ -87,7 +257,7 @@
           },
           {
             "result": {
-              "duration": 137835800,
+              "duration": 127750400,
               "status": "passed"
             },
             "line": 12,
@@ -105,7 +275,7 @@
           },
           {
             "result": {
-              "duration": 52864900,
+              "duration": 50553400,
               "status": "passed"
             },
             "line": 13,
@@ -123,7 +293,7 @@
           },
           {
             "result": {
-              "duration": 70004700,
+              "duration": 58661000,
               "status": "passed"
             },
             "line": 14,
@@ -135,7 +305,7 @@
           },
           {
             "result": {
-              "duration": 172358900,
+              "duration": 586930300,
               "status": "passed"
             },
             "line": 15,
@@ -167,24 +337,23 @@
         "steps": [
           {
             "result": {
-              "duration": 1006300,
+              "duration": 5983700,
               "status": "passed"
             },
             "line": 5,
             "name": "the user is logged in",
             "match": {
-              "location": "com.revature.step.AddPlanetSteps.user_is_logged_in()"
+              "location": "com.revature.step.RegistrationSteps.logged_in()"
             },
             "keyword": "Given "
           }
         ]
       },
       {
-        "start_timestamp": "2024-08-07T00:01:01.821Z",
+        "start_timestamp": "2024-08-07T21:50:19.644Z",
         "before": [
           {
             "result": {
-              "duration": 1997600,
               "status": "passed"
             },
             "match": {
@@ -201,7 +370,7 @@
         "steps": [
           {
             "result": {
-              "duration": 38635900,
+              "duration": 40084600,
               "status": "passed"
             },
             "line": 9,
@@ -213,7 +382,7 @@
           },
           {
             "result": {
-              "duration": 2131642900,
+              "duration": 2104947800,
               "status": "passed"
             },
             "line": 10,
@@ -231,7 +400,7 @@
           },
           {
             "result": {
-              "duration": 741407900,
+              "duration": 174562600,
               "status": "passed"
             },
             "line": 11,
@@ -243,7 +412,7 @@
           },
           {
             "result": {
-              "duration": 287919400,
+              "duration": 209591000,
               "status": "passed"
             },
             "line": 12,
@@ -261,7 +430,7 @@
           },
           {
             "result": {
-              "duration": 41440800,
+              "duration": 33570700,
               "status": "passed"
             },
             "line": 13,
@@ -279,7 +448,7 @@
           },
           {
             "result": {
-              "duration": 58289400,
+              "duration": 38888800,
               "status": "passed"
             },
             "line": 14,
@@ -291,7 +460,7 @@
           },
           {
             "result": {
-              "duration": 155487200,
+              "duration": 317510800,
               "status": "passed"
             },
             "line": 15,
@@ -323,6 +492,1860 @@
     "tags": [
       {
         "name": "@AddPlanetFunctionality",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-07T21:50:22.582Z",
+        "before": [
+          {
+            "result": {
+              "duration": 996600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "As a User I want to login into the planetarium so that i can add and upload planets",
+        "description": "  and moons",
+        "id": "loginfunctionality;as-a-user-i-want-to-login-into-the-planetarium-so-that-i-can-add-and-upload-planets;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 55730900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 87491700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user enters \"Batman\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 121162600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user enters \"I am the night\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"I am the night\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 55466400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user clicks login button",
+            "match": {
+              "location": "com.revature.step.LoginStep.the_user_clicks_login_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for condition to not be valid: title to be \"Home\". Current title: \"Home\" (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.10\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\foruk\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59519}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59519/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 9afe510728259863a80500ce2eb72114\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)\r\n\tat com.revature.step.LoginStep.the_user_should_be_on_the_planetarium_page(LoginStep.java:42)\r\n\tat ✽.the user should be on the planetarium page(classpath:features/LoginFunctionality.feature:10)\r\n",
+              "duration": 5162583700,
+              "status": "failed"
+            },
+            "line": 10,
+            "name": "the user should be on the planetarium page",
+            "match": {
+              "location": "com.revature.step.LoginStep.the_user_should_be_on_the_planetarium_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LoginFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T21:50:28.082Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Unsuccessful login with invalid credentials",
+        "description": "",
+        "id": "loginfunctionality;unsuccessful-login-with-invalid-credentials;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 55910700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 151918800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user enters \"I am the night\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"I am the night\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 102264800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user enters \"Batman\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51502200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user clicks login button",
+            "match": {
+              "location": "com.revature.step.LoginStep.the_user_clicks_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 523451800,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user should see an error message",
+            "match": {
+              "location": "com.revature.step.LoginStep.the_user_should_see_an_alert_with_the_login_error_message()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LoginFunctionality"
+          }
+        ]
+      }
+    ],
+    "name": "LoginFunctionality",
+    "description": "",
+    "id": "loginfunctionality",
+    "keyword": "Feature",
+    "uri": "classpath:features/LoginFunctionality.feature",
+    "tags": [
+      {
+        "name": "@LoginFunctionality",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-07T21:50:29.026Z",
+        "before": [
+          {
+            "result": {
+              "duration": 998500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "As a User I want to login with an account into the Planetarium Application and then delete a moon",
+        "description": "  Moon Deletion functionality System Test for Planetarium Application",
+        "id": "searchfunctionality;as-a-user-i-want-to-login-with-an-account-into-the-planetarium-application-and-then-delete-a-moon;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 38331500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 102560200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user enters \"Batman!\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 136472800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user enters \"I am the night!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"I am the night!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "the user clicks the login button",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "the user enters \"moon_name\" in the moon deletion bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"moon_name\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.MoonDeletionSteps.the_user_enters_in_the_moon_deletion_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "the user clicks the delete button",
+            "match": {
+              "location": "com.revature.step.MoonDeletionSteps.the_user_clicks_the_delete_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "the user should be prompted that a moon was deleted",
+            "match": {
+              "location": "com.revature.step.MoonDeletionSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 997300,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "the user should exit the prompted alert",
+            "match": {
+              "location": "com.revature.step.MoonDeletionSteps.the_user_presses_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@MoonDeletionFunctionality"
+          }
+        ]
+      }
+    ],
+    "name": "searchFunctionality",
+    "description": "",
+    "id": "searchfunctionality",
+    "keyword": "Feature",
+    "uri": "classpath:features/MoonDeletionFunctionality.feature",
+    "tags": [
+      {
+        "name": "@MoonDeletionFunctionality",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-07T21:50:29.320Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "As a User I want to register an account into the Planetarium Application with valid inputs",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registrationfunctionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application-with-valid-inputs;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 31828800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 116462500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 172132600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user enters \"Ba1mwnde48w1r3m17326rg16do4211\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ba1mwnde48w1r3m17326rg16do4211\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 155853000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Diddler and Joker Disagree!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Diddler and Joker Disagree!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 52072200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 514180200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should be prompted that an account status",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user should exit the prompted account created alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T21:50:30.380Z",
+        "before": [
+          {
+            "result": {
+              "duration": 997500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "As a User I want to register an account into the Planetarium Application with valid inputs",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registrationfunctionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application-with-valid-inputs;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 62522800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 110730800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 201217000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user enters \"Bawmewo2i8a1w2m3732dee16ow4211\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bawmewo2i8a1w2m3732dee16ow4211\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 164236500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Rid Jokerdler and Disagree!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Rid Jokerdler and Disagree!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 37218200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 521530800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should be prompted that an account status",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user should exit the prompted account created alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T21:50:31.488Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "As a User I want to register an account into the Planetarium Application with valid inputs",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registrationfunctionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application-with-valid-inputs;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 34867600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 77590900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 186684900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user enters \"Batmwnden8w2a1msd12rge16ow4211\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batmwnden8w2a1msd12rge16ow4211\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 274268700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Diddler and Joker Disagree!!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Diddler and Joker Disagree!!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 49510800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20558400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should be prompted that an account status",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Test Prompted Account Creation Failed\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue(RegistrationSteps.java:87)\r\n\tat ✽.the user should exit the prompted account created alert(classpath:features/RegistrationFunctionality.feature:12)\r\n",
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "the user should exit the prompted account created alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T21:50:32.143Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "As a User I want to register an account into the Planetarium Application with valid inputs",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registrationfunctionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application-with-valid-inputs;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 48580600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 119224300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 210982100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user enters \"Bawmeqobi8aswmtqca2d e16ow4211!\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bawmeqobi8aswmtqca2d e16ow4211!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 170879500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Rid Jokerdler and Disagree!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Rid Jokerdler and Disagree!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 41128200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 19217100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should be prompted that an account status",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Test Prompted Account Creation Failed\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue(RegistrationSteps.java:87)\r\n\tat ✽.the user should exit the prompted account created alert(classpath:features/RegistrationFunctionality.feature:12)\r\n",
+              "duration": 997800,
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "the user should exit the prompted account created alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T21:50:32.765Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "As a User I want to register an account into the Planetarium Application with valid inputs",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registrationfunctionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application-with-valid-inputs;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 64169300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 104103500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 224615600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user enters \"Ba1mwnde48w1r3m17326rg16do4211\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ba1mwnde48w1r3m17326rg16do4211\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 192334100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Diddler and Joker Disagree!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Diddler and Joker Disagree!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 37600100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 517882700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should be prompted that an account status",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Test Prompted Account Creation Failed\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue(RegistrationSteps.java:87)\r\n\tat ✽.the user should exit the prompted account created alert(classpath:features/RegistrationFunctionality.feature:12)\r\n",
+              "duration": 996700,
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "the user should exit the prompted account created alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T21:50:33.919Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "As a User I want to register an account into the Planetarium Application with valid inputs",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registrationfunctionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application-with-valid-inputs;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 47742700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 99707500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 219425800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user enters \"Ba1mwnd248wBrmq7432rge16ow4211\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ba1mwnd248wBrmq7432rge16ow4211\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 144783300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters \"Diddler and Joker Disagree!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Diddler and Joker Disagree!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 33502400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 514737900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should be prompted that an account status",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user should exit the prompted account created alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T21:50:34.987Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 36,
+        "name": "As a User I want to not register an account into the Planetarium Application with invalid inputs",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registrationfunctionality;as-a-user-i-want-to-not-register-an-account-into-the-planetarium-application-with-invalid-inputs;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 38901500,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 113027400,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 164281500,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user enters \"Batman\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 149553200,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user enters \"I am the night\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"I am the night\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 46281100,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 531127100,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the user should be prompted that an account status",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user should exit the prompted account not created alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_exits_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T21:50:36.038Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 37,
+        "name": "As a User I want to not register an account into the Planetarium Application with invalid inputs",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registrationfunctionality;as-a-user-i-want-to-not-register-an-account-into-the-planetarium-application-with-invalid-inputs;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 54482500,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 134230000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 317347200,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user enters \"Batmwndenww2a1m3d1ar1e1do64!11\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batmwndenww2a1m3d1ar1e1do64!11\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 256957500,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user enters \"Diddler and Joker Disagree!!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Diddler and Joker Disagree!!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 148575100,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 30099300,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the user should be prompted that an account status",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user should exit the prompted account not created alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_exits_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T21:50:36.997Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 38,
+        "name": "As a User I want to not register an account into the Planetarium Application with invalid inputs",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registrationfunctionality;as-a-user-i-want-to-not-register-an-account-into-the-planetarium-application-with-invalid-inputs;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 81425700,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 137048000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 139174700,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user enters \"Bawmeqobisaswmt3cawd1e1No64!11!\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bawmeqobisaswmt3cawd1e1No64!11!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 98763400,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user enters \"Rid Jokerdler and Disagree!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Rid Jokerdler and Disagree!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 46110900,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13652900,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the user should be prompted that an account status",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user should exit the prompted account not created alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_exits_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T21:50:37.520Z",
+        "before": [
+          {
+            "result": {
+              "duration": 997300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 39,
+        "name": "As a User I want to not register an account into the Planetarium Application with invalid inputs",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registrationfunctionality;as-a-user-i-want-to-not-register-an-account-into-the-planetarium-application-with-invalid-inputs;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 46381800,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 188081200,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 262109000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user enters \"Bawmewo2isaawm3373wd1e1No64!11\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bawmewo2isaawm3373wd1e1No64!11\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 88369600,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user enters \"Rid Jokerdler and Disagree!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Rid Jokerdler and Disagree!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 41469400,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 515824200,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the user should be prompted that an account status",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Test Prompted Account Creation Successful\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat com.revature.step.RegistrationSteps.the_user_exits_handles_alert_to_continue(RegistrationSteps.java:93)\r\n\tat ✽.the user should exit the prompted account not created alert(classpath:features/RegistrationFunctionality.feature:32)\r\n",
+              "status": "failed"
+            },
+            "line": 32,
+            "name": "the user should exit the prompted account not created alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_exits_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T21:50:38.673Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 40,
+        "name": "As a User I want to not register an account into the Planetarium Application with invalid inputs",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registrationfunctionality;as-a-user-i-want-to-not-register-an-account-into-the-planetarium-application-with-invalid-inputs;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 33147500,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 80255000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 107691000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user enters \"Ba1mwnde4wwBrm37436r1e1do64!11\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ba1mwnde4wwBrm37436r1e1do64!11\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 84567900,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user enters \"Diddler and Joker Disagree!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Diddler and Joker Disagree!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 38737000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 518496600,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the user should be prompted that an account status",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Test Prompted Account Creation Successful\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat com.revature.step.RegistrationSteps.the_user_exits_handles_alert_to_continue(RegistrationSteps.java:93)\r\n\tat ✽.the user should exit the prompted account not created alert(classpath:features/RegistrationFunctionality.feature:32)\r\n",
+              "status": "failed"
+            },
+            "line": 32,
+            "name": "the user should exit the prompted account not created alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_exits_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T21:50:39.541Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 41,
+        "name": "As a User I want to not register an account into the Planetarium Application with invalid inputs",
+        "description": "  User Registration functionality System Test for Planetarium Application",
+        "id": "registrationfunctionality;as-a-user-i-want-to-not-register-an-account-into-the-planetarium-application-with-invalid-inputs;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 27099800,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user is on the Landing Page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 68230400,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks create an account",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_create_an_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 118456900,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user enters \"Bawmeqobisaswmt3cawd1e1No64!11!\" in the username bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bawmeqobisaswmt3cawd1e1No64!11!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 80970700,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user enters \"Rid Jokerdler and Disagree!!!!\" in the password bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Rid Jokerdler and Disagree!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 39575700,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the user clicks the create button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_clicks_the_create_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 514876400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the user should be prompted that an account status",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_should_be_prompted_that_an_account_was_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user should exit the prompted account not created alert",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_user_exits_handles_alert_to_continue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationFunctionality"
+          }
+        ]
+      }
+    ],
+    "name": "registrationFunctionality",
+    "description": "",
+    "id": "registrationfunctionality",
+    "keyword": "Feature",
+    "uri": "classpath:features/RegistrationFunctionality.feature",
+    "tags": [
+      {
+        "name": "@RegistrationFunctionality",
         "type": "Tag",
         "location": {
           "line": 1,

@@ -13,3 +13,15 @@ Feature: LoginFunctionality
     Examples:
       | username                        | password                        |
       | Batman                          | I am the night                  |
+
+
+  Scenario Outline: Unsuccessful login with invalid credentials
+     Given the user is on the Landing Page
+      When the user enters "<invalidUsername>" in the username bar
+      And the user enters "<invalidPassword>" in the password bar
+      And the user clicks login button
+      Then the user should see an error message
+
+      Examples:
+        | invalidUsername | invalidPassword     |
+        | I am the night  | Batman              |
