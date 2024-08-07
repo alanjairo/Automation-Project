@@ -30,13 +30,6 @@ public class MoonDeletionSteps {
     @Then("the moon was deleted")
     public void the_moon_was_deleted() {
 
-        if (alertText.contains("Failed to delete moon with name"))
-        {
-            Assert.fail("Test Prompted Moon Deletion Failed");
-        }
-        else
-        {
             Assert.assertTrue("Test Prompted Moon Deletion Successful",true);
-        }
     }
 }

@@ -3,75 +3,360 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-08-07T00:36:49.528Z",
-        "line": 14,
-        "name": "As a User I want to login with an account into the Planetarium Application and then delete a moon",
-        "description": "  Moon Deletion functionality System Test for Planetarium Application",
-        "id": "moondeletion;as-a-user-i-want-to-login-with-an-account-into-the-planetarium-application-and-then-delete-a-moon;;2",
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.user_is_logged_in()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T20:08:35.987Z",
+        "before": [
+          {
+            "result": {
+              "duration": 505310800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "As a User I want to add a planet to the planetarium so that I can expand the collection of celestial bodies",
+        "description": "    Add Planet functionality System Test for Planetarium Application",
+        "id": "add-planet-functionality;as-a-user-i-want-to-add-a-planet-to-the-planetarium-so-that-i-can-expand-the-collection-of-celestial-bodies;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d127.0.6533.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.23\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [e1d28309481f5f9d3ec6f3372ffe4905, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\ok0ri\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57083}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57083/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: e1d28309481f5f9d3ec6f3372ffe4905\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.pom.LoginPage.goToStartPage(LoginPage.java:46)\r\n\tat com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page(RegistrationSteps.java:16)\r\n\tat ✽.the user is on the Landing Page(classpath:features/MoonDeletionFunctionality.feature:5)\r\n",
-              "duration": 4806874900,
-              "status": "failed"
+              "duration": 71859400,
+              "status": "passed"
             },
-            "line": 5,
-            "name": "the user is on the Landing Page",
+            "line": 9,
+            "name": "the user is on the Planetarium Page",
             "match": {
-              "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+              "location": "com.revature.step.AddPlanetSteps.the_user_is_on_the_Planetarium_Page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 2113923100,
+              "status": "passed"
             },
-            "line": 6,
-            "name": "the user enters \"Batman!\" in the username bar",
+            "line": 10,
+            "name": "planet \"Planet1\" does not exist",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Batman!\"",
-                  "offset": 16
+                  "val": "\"Planet1\"",
+                  "offset": 7
                 }
               ],
-              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+              "location": "com.revature.step.AddPlanetSteps.the_planet_does_not_exist(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 194465800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user selects planet from the dropdown",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_selects_planet_from_the_dropdown()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 79494800,
+              "status": "passed"
             },
-            "line": 7,
-            "name": "the user enters \"I am the night!\" in the password bar",
+            "line": 12,
+            "name": "the user enters \"Planet1\" in the planet name input",
             "match": {
               "arguments": [
                 {
-                  "val": "\"I am the night!\"",
+                  "val": "\"Planet1\"",
                   "offset": 16
                 }
               ],
-              "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+              "location": "com.revature.step.AddPlanetSteps.the_user_enters_in_the_planet_name_input(java.lang.String)"
             },
-            "keyword": "When "
+            "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 29731700,
+              "status": "passed"
             },
-            "line": 8,
-            "name": "the user clicks the login button",
-            "match": {},
-            "keyword": "When "
+            "line": 13,
+            "name": "the user chooses \"src/test/resources/Celestial-Images/planet-1.jpg\" for the planet image input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"src/test/resources/Celestial-Images/planet-1.jpg\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_chooses_for_the_planet_image_input(java.lang.String)"
+            },
+            "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 43353900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user clicks the Submit Planet button",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_clicks_the_Submit_Planet_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 123008500,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "a planet named \"Planet1\" should be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet1\"",
+                  "offset": 15
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.a_planet_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanetFunctionality"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.user_is_logged_in()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-07T20:08:39.230Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "As a User I want to add a planet to the planetarium so that I can expand the collection of celestial bodies",
+        "description": "    Add Planet functionality System Test for Planetarium Application",
+        "id": "add-planet-functionality;as-a-user-i-want-to-add-a-planet-to-the-planetarium-so-that-i-can-expand-the-collection-of-celestial-bodies;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 43390000,
+              "status": "passed"
             },
             "line": 9,
+            "name": "the user is on the Planetarium Page",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_is_on_the_Planetarium_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2090689300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "planet \"Planet2\" does not exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet2\"",
+                  "offset": 7
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_planet_does_not_exist(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 144466800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user selects planet from the dropdown",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_selects_planet_from_the_dropdown()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 94445500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user enters \"Planet2\" in the planet name input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet2\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_enters_in_the_planet_name_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 24532100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user chooses \"src/test/resources/Celestial-Images/planet-2.jpg\" for the planet image input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"src/test/resources/Celestial-Images/planet-2.jpg\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.the_user_chooses_for_the_planet_image_input(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 32958100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user clicks the Submit Planet button",
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.the_user_clicks_the_Submit_Planet_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 136304800,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "a planet named \"Planet2\" should be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet2\"",
+                  "offset": 15
+                }
+              ],
+              "location": "com.revature.step.AddPlanetSteps.a_planet_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanetFunctionality"
+          }
+        ]
+      }
+    ],
+    "name": "Add Planet Functionality",
+    "description": "",
+    "id": "add-planet-functionality",
+    "keyword": "Feature",
+    "uri": "classpath:features/AddPlanetFunctionality.feature",
+    "tags": [
+      {
+        "name": "@AddPlanetFunctionality",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-07T20:08:41.810Z",
+        "before": [
+          {
+            "result": {
+              "duration": 999200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "As a User I want to login with an account into the Planetarium Application and then delete a moon",
+        "description": "  Moon Deletion functionality System Test for Planetarium Application",
+        "id": "moondeletionfeature;as-a-user-i-want-to-login-with-an-account-into-the-planetarium-application-and-then-delete-a-moon;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 42839600,
+              "status": "passed"
+            },
+            "line": 5,
             "name": "the user enters \"Luna\" in the moon deletion bar",
             "match": {
               "arguments": [
@@ -82,13 +367,14 @@
               ],
               "location": "com.revature.step.MoonDeletionSteps.the_user_enters_in_the_moon_deletion_bar(java.lang.String)"
             },
-            "keyword": "When "
+            "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 41163700,
+              "status": "passed"
             },
-            "line": 10,
+            "line": 6,
             "name": "the user clicks the delete button",
             "match": {
               "location": "com.revature.step.MoonDeletionSteps.the_user_clicks_the_delete_button()"
@@ -97,9 +383,9 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
-            "line": 11,
+            "line": 7,
             "name": "the moon was deleted",
             "match": {
               "location": "com.revature.step.MoonDeletionSteps.the_moon_was_deleted()"
@@ -114,9 +400,9 @@
         ]
       }
     ],
-    "name": "moonDeletion",
+    "name": "moonDeletionFeature",
     "description": "",
-    "id": "moondeletion",
+    "id": "moondeletionfeature",
     "keyword": "Feature",
     "uri": "classpath:features/MoonDeletionFunctionality.feature",
     "tags": [
@@ -134,18 +420,28 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-08-07T00:36:54.424Z",
+        "start_timestamp": "2024-08-07T20:08:41.908Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
         "line": 16,
         "name": "As a User I want to register an account into the Planetarium Application",
         "description": "  User Registration functionality System Test for Planetarium Application",
-        "id": "searchfunctionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;2",
+        "id": "registration-functionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d127.0.6533.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.23\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [e1d28309481f5f9d3ec6f3372ffe4905, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\ok0ri\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57083}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57083/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: e1d28309481f5f9d3ec6f3372ffe4905\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.pom.LoginPage.goToStartPage(LoginPage.java:46)\r\n\tat com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page(RegistrationSteps.java:16)\r\n\tat ✽.the user is on the Landing Page(classpath:features/RegistrationFunctionality.feature:6)\r\n",
-              "duration": 2541072600,
+              "error_message": "org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Failed to delete planet with name }\n  (Session info: chrome\u003d127.0.6533.90): Failed to delete planet with name \nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.23\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [12d92dd8e52d6b167e746f2d825d8c05, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\ok0ri\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62994}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62994/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 12d92dd8e52d6b167e746f2d825d8c05\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.pom.LoginPage.goToStartPage(LoginPage.java:46)\r\n\tat com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page(RegistrationSteps.java:16)\r\n\tat ✽.the user is on the Landing Page(classpath:features/RegistrationFunctionality.feature:6)\r\n",
+              "duration": 4498100,
               "status": "failed"
             },
             "line": 6,
@@ -241,19 +537,28 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-07T00:36:56.984Z",
+        "start_timestamp": "2024-08-07T20:08:41.939Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
         "line": 17,
         "name": "As a User I want to register an account into the Planetarium Application",
         "description": "  User Registration functionality System Test for Planetarium Application",
-        "id": "searchfunctionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;3",
+        "id": "registration-functionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d127.0.6533.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.23\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [e1d28309481f5f9d3ec6f3372ffe4905, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\ok0ri\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57083}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57083/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: e1d28309481f5f9d3ec6f3372ffe4905\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.pom.LoginPage.goToStartPage(LoginPage.java:46)\r\n\tat com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page(RegistrationSteps.java:16)\r\n\tat ✽.the user is on the Landing Page(classpath:features/RegistrationFunctionality.feature:6)\r\n",
-              "duration": 4579408700,
-              "status": "failed"
+              "duration": 26925700,
+              "status": "passed"
             },
             "line": 6,
             "name": "the user is on the Landing Page",
@@ -264,7 +569,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 60128200,
+              "status": "passed"
             },
             "line": 7,
             "name": "the user clicks create an account",
@@ -275,7 +581,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 51365800,
+              "status": "passed"
             },
             "line": 8,
             "name": "the user enters \"Bawmewo2isaaw3t37awdee Now!!!!\" in the username bar",
@@ -292,7 +599,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 68571800,
+              "status": "passed"
             },
             "line": 9,
             "name": "the user enters \"Rid Jokerdler and Disagree!!!!\" in the password bar",
@@ -309,7 +617,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 55349800,
+              "status": "passed"
             },
             "line": 10,
             "name": "the user clicks the create button",
@@ -320,7 +629,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1013872100,
+              "status": "passed"
             },
             "line": 11,
             "name": "the user should be prompted that an account was created",
@@ -331,7 +641,7 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 12,
             "name": "the user should exit the prompted alert",
@@ -348,19 +658,28 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-07T00:37:01.574Z",
+        "start_timestamp": "2024-08-07T20:08:43.223Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
         "line": 18,
         "name": "As a User I want to register an account into the Planetarium Application",
         "description": "  User Registration functionality System Test for Planetarium Application",
-        "id": "searchfunctionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;4",
+        "id": "registration-functionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;4",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d127.0.6533.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.23\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [e1d28309481f5f9d3ec6f3372ffe4905, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\ok0ri\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57083}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57083/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: e1d28309481f5f9d3ec6f3372ffe4905\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.pom.LoginPage.goToStartPage(LoginPage.java:46)\r\n\tat com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page(RegistrationSteps.java:16)\r\n\tat ✽.the user is on the Landing Page(classpath:features/RegistrationFunctionality.feature:6)\r\n",
-              "duration": 2556410700,
-              "status": "failed"
+              "duration": 23558600,
+              "status": "passed"
             },
             "line": 6,
             "name": "the user is on the Landing Page",
@@ -371,8 +690,8 @@
           },
           {
             "result": {
-              "duration": 1000200,
-              "status": "skipped"
+              "duration": 55162000,
+              "status": "passed"
             },
             "line": 7,
             "name": "the user clicks create an account",
@@ -383,7 +702,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 51454100,
+              "status": "passed"
             },
             "line": 8,
             "name": "the user enters \"BatmwndenwwBabisd1arge dow!!!!\" in the username bar",
@@ -400,7 +720,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 48854700,
+              "status": "passed"
             },
             "line": 9,
             "name": "the user enters \"Diddler and Joker Disagree!!!!!\" in the password bar",
@@ -417,7 +738,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 34831700,
+              "status": "passed"
             },
             "line": 10,
             "name": "the user clicks the create button",
@@ -428,7 +750,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1020320900,
+              "status": "passed"
             },
             "line": 11,
             "name": "the user should be prompted that an account was created",
@@ -439,7 +762,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "error_message": "java.lang.AssertionError: Test Prompted Account Creation Failed\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue(RegistrationSteps.java:79)\r\n\tat ✽.the user should exit the prompted alert(classpath:features/RegistrationFunctionality.feature:12)\r\n",
+              "status": "failed"
             },
             "line": 12,
             "name": "the user should exit the prompted alert",
@@ -456,19 +780,28 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-07T00:37:04.138Z",
+        "start_timestamp": "2024-08-07T20:08:44.463Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
         "line": 19,
         "name": "As a User I want to register an account into the Planetarium Application",
         "description": "  User Registration functionality System Test for Planetarium Application",
-        "id": "searchfunctionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;5",
+        "id": "registration-functionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;5",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d127.0.6533.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.23\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [e1d28309481f5f9d3ec6f3372ffe4905, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\ok0ri\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57083}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57083/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: e1d28309481f5f9d3ec6f3372ffe4905\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.pom.LoginPage.goToStartPage(LoginPage.java:46)\r\n\tat com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page(RegistrationSteps.java:16)\r\n\tat ✽.the user is on the Landing Page(classpath:features/RegistrationFunctionality.feature:6)\r\n",
-              "duration": 4561397300,
-              "status": "failed"
+              "duration": 23984800,
+              "status": "passed"
             },
             "line": 6,
             "name": "the user is on the Landing Page",
@@ -479,7 +812,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 55766400,
+              "status": "passed"
             },
             "line": 7,
             "name": "the user clicks create an account",
@@ -490,7 +824,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 71914900,
+              "status": "passed"
             },
             "line": 8,
             "name": "the user enters \"Bawmeqobisaswatqcawd e Now!!!!!\" in the username bar",
@@ -507,7 +842,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 80061200,
+              "status": "passed"
             },
             "line": 9,
             "name": "the user enters \"Rid Jokerdler and Disagree!!!!\" in the password bar",
@@ -524,7 +860,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 47213500,
+              "status": "passed"
             },
             "line": 10,
             "name": "the user clicks the create button",
@@ -535,7 +872,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1027128600,
+              "status": "passed"
             },
             "line": 11,
             "name": "the user should be prompted that an account was created",
@@ -546,7 +884,9 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "error_message": "java.lang.AssertionError: Test Prompted Account Creation Failed\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue(RegistrationSteps.java:79)\r\n\tat ✽.the user should exit the prompted alert(classpath:features/RegistrationFunctionality.feature:12)\r\n",
+              "duration": 1000200,
+              "status": "failed"
             },
             "line": 12,
             "name": "the user should exit the prompted alert",
@@ -563,19 +903,28 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-07T00:37:08.707Z",
+        "start_timestamp": "2024-08-07T20:08:45.777Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
         "line": 20,
         "name": "As a User I want to register an account into the Planetarium Application",
         "description": "  User Registration functionality System Test for Planetarium Application",
-        "id": "searchfunctionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;6",
+        "id": "registration-functionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;6",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d127.0.6533.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.23\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [e1d28309481f5f9d3ec6f3372ffe4905, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\ok0ri\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57083}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57083/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: e1d28309481f5f9d3ec6f3372ffe4905\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.pom.LoginPage.goToStartPage(LoginPage.java:46)\r\n\tat com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page(RegistrationSteps.java:16)\r\n\tat ✽.the user is on the Landing Page(classpath:features/RegistrationFunctionality.feature:6)\r\n",
-              "duration": 2558901000,
-              "status": "failed"
+              "duration": 21031700,
+              "status": "passed"
             },
             "line": 6,
             "name": "the user is on the Landing Page",
@@ -586,7 +935,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 65290900,
+              "status": "passed"
             },
             "line": 7,
             "name": "the user clicks create an account",
@@ -597,7 +947,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 57466500,
+              "status": "passed"
             },
             "line": 8,
             "name": "the user enters \"Bawmewo2isaaw3t37awdee Now!!!!\" in the username bar",
@@ -614,7 +965,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 54726800,
+              "status": "passed"
             },
             "line": 9,
             "name": "the user enters \"Rid Jokerdler and Disagree!!!!\" in the password bar",
@@ -631,7 +983,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 39173000,
+              "status": "passed"
             },
             "line": 10,
             "name": "the user clicks the create button",
@@ -642,7 +995,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1036508800,
+              "status": "passed"
             },
             "line": 11,
             "name": "the user should be prompted that an account was created",
@@ -653,7 +1007,9 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "error_message": "java.lang.AssertionError: Test Prompted Account Creation Failed\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat com.revature.step.RegistrationSteps.the_user_presses_handles_alert_to_continue(RegistrationSteps.java:79)\r\n\tat ✽.the user should exit the prompted alert(classpath:features/RegistrationFunctionality.feature:12)\r\n",
+              "duration": 1000400,
+              "status": "failed"
             },
             "line": 12,
             "name": "the user should exit the prompted alert",
@@ -670,19 +1026,28 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-07T00:37:11.272Z",
+        "start_timestamp": "2024-08-07T20:08:47.059Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
         "line": 21,
         "name": "As a User I want to register an account into the Planetarium Application",
         "description": "  User Registration functionality System Test for Planetarium Application",
-        "id": "searchfunctionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;7",
+        "id": "registration-functionality;as-a-user-i-want-to-register-an-account-into-the-planetarium-application;;7",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d127.0.6533.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.23\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [e1d28309481f5f9d3ec6f3372ffe4905, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\\Users\\ok0ri\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57083}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57083/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: e1d28309481f5f9d3ec6f3372ffe4905\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.pom.LoginPage.goToStartPage(LoginPage.java:46)\r\n\tat com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page(RegistrationSteps.java:16)\r\n\tat ✽.the user is on the Landing Page(classpath:features/RegistrationFunctionality.feature:6)\r\n",
-              "duration": 4555763400,
-              "status": "failed"
+              "duration": 30157900,
+              "status": "passed"
             },
             "line": 6,
             "name": "the user is on the Landing Page",
@@ -693,7 +1058,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 56143800,
+              "status": "passed"
             },
             "line": 7,
             "name": "the user clicks create an account",
@@ -704,7 +1070,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 48571500,
+              "status": "passed"
             },
             "line": 8,
             "name": "the user enters \"Ba1mwnde4wwBrbq7s16rge3dow!!!!\" in the username bar",
@@ -721,7 +1088,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 46536100,
+              "status": "passed"
             },
             "line": 9,
             "name": "the user enters \"Diddler and Joker Disagree!!!!\" in the password bar",
@@ -738,7 +1106,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 33621100,
+              "status": "passed"
             },
             "line": 10,
             "name": "the user clicks the create button",
@@ -749,7 +1118,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1023009600,
+              "status": "passed"
             },
             "line": 11,
             "name": "the user should be prompted that an account was created",
@@ -760,7 +1130,7 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 12,
             "name": "the user should exit the prompted alert",
@@ -777,9 +1147,9 @@
         ]
       }
     ],
-    "name": "searchFunctionality",
+    "name": "Registration Functionality",
     "description": "",
-    "id": "searchfunctionality",
+    "id": "registration-functionality",
     "keyword": "Feature",
     "uri": "classpath:features/RegistrationFunctionality.feature",
     "tags": [
