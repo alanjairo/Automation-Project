@@ -43,3 +43,4 @@ build/
 
 ### pom.xml ###
 pom.xml
+/src/test/resources/reports/

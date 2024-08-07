@@ -26,11 +26,6 @@ public class AddPlanetSteps {
         }
     }
 
-    @Given("the user is logged in")
-    public void user_is_logged_in() {
-        // handled in Before
-    }
-
     @Given("the user is on the Planetarium Page")
     public void the_user_is_on_the_Planetarium_Page() {
         TestRun.planetariumPage.goToHomePage();

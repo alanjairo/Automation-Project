@@ -22,9 +22,6 @@ public class LoginPage {
     @FindBy(id = "passwordInput")
     private WebElement  passwordInput;
 
-    @FindBy(xpath = "//*[@id=\"loginForm\"]/input[3]")
-    private WebElement createButton;
-
     @FindBy(xpath = "/html/body/div/form/input[3]")
     private WebElement loginButton;
 
@@ -59,11 +56,6 @@ public class LoginPage {
     public void sendPasswordInput(String input)
     {
         passwordInput.sendKeys(input);
-    }
-
-    public void clickAccountSubmitButton()
-    {
-        createButton.click();
     }
 
     public void pressEnter()
