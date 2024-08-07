@@ -36,6 +36,7 @@ public class TestRun {
 
     @BeforeClass
     public static void setup() {
+        Setup.resetTestDatabase();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         startPage = new LoginPage(driver);
