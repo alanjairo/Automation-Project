@@ -86,6 +86,14 @@ public class Planetarium {
         submitPlanetButton.click();
     }
 
+    public void sendInputForDeletion(String toBeDeleted) {
+        deleteInput.sendKeys(toBeDeleted);
+    }
+
+    public void clickDeleteButton() {
+        deleteButton.click();
+    }
+
     // moon actions
     public void selectMoonFromDropdown() {
         locationSelect.click();
