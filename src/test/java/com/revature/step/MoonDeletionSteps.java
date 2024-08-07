@@ -30,13 +30,9 @@ public class MoonDeletionSteps {
     @Then("the moon was deleted")
     public void the_moon_was_deleted() {
 
-        /*
-            The code here will return true with no message
-            into Cucumber and return false with a "creation failed" message
-        */
         if (alertText.contains("Failed to delete moon with name"))
         {
-            Assert.fail("Test Prompted Account Creation Failed");
+            Assert.fail("Test Prompted Moon Deletion Failed");
         }
         else
         {
