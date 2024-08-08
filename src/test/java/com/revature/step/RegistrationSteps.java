@@ -78,9 +78,9 @@ public class RegistrationSteps {
             into Cucumber and return false with a "creation failed" message
         */
 
-        if (alertText.contains("Account creation successfully"))
+        if (alertText.contains("Account created successfully"))
         {
-            Assert.assertTrue("Account Creation Failed",alertText.contains("Account creation successfully"));
+            Assert.assertTrue("Account Creation Failed",alertText.contains("Account created successfully"));
         }
         else if (alertText.contains("Account creation failed"))
         {

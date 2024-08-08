@@ -2,7 +2,9 @@ package com.revature.pom;
 
 import java.io.File;
 import java.time.Duration;
+import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -12,18 +14,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.openqa.selenium.NoSuchElementException;
 
 public class PlanetariumPage {
     private WebDriver driver;
 
     private String url = "http://localhost:8080/planetarium";
-
-    // private String planetImage =
-    // "src\\test\\resources\\Celestial-Images\\planet-1.jpg";
-
-    // private String moonImageFilename =
-    // "src\\test\\resources\\Celestial-Images\\moon-1.jpg";
 
     private WebElement enter;
 
@@ -94,25 +91,25 @@ public class PlanetariumPage {
     }
 
     public void clickSubmitPlanetButton() {
+        System.out.println("printme2");
         submitPlanetButton.click();
     }
 
     public boolean verifyPlanetExists(String planetName) {
         wait.until(ExpectedConditions.visibilityOf(celestialTable));
 
-        
         try {
-            String xpathExpression = ".//tr/td[3][text()='" + planetName + "']";
-            WebElement cell = celestialTable.findElement(By.xpath(xpathExpression));
+            String xpathExpression = ".//tr[td[1][text()='planet'] and td[3][text()='" + planetName + "']]";
+            WebElement row = celestialTable.findElement(By.xpath(xpathExpression));
 
-            WebElement secondPrecedingSibling = cell.findElement(By.xpath("preceding-sibling::td[2]"));
-            String secondPrecedingSiblingText = secondPrecedingSibling.getText();
-
-            return secondPrecedingSiblingText != null && secondPrecedingSiblingText.equals("planet");
-
+            return row != null;
         } catch (NoSuchElementException ex) {
             return false;
         }
+    }
+
+    public String getAlertText() {
+        return "myString";
     }
 
     // moon actions
@@ -140,27 +137,21 @@ public class PlanetariumPage {
         submitMoonButton.click();
     }
 
-    // handle pop up (temp)
-    public void pressEnter() {
-        enter.sendKeys(Keys.ENTER);
-    }
-
     public boolean verifyMoonExists(String moonName) {
         wait.until(ExpectedConditions.visibilityOf(celestialTable));
 
-
         try {
-            String xpathExpression = ".//tr/td[3][text()='" + moonName + "']";
-            WebElement cell = celestialTable.findElement(By.xpath(xpathExpression));
-
-            WebElement secondPrecedingSibling = cell.findElement(By.xpath("preceding-sibling::td[2]"));
-            String secondPrecedingSiblingText = secondPrecedingSibling.getText();
-
-            return secondPrecedingSiblingText != null && secondPrecedingSiblingText.equals("moon");
-
+            String xpathExpression = ".//tr[td[1][text()='moon'] and td[3][text()='" + moonName + "']]";
+            WebElement row = celestialTable.findElement(By.xpath(xpathExpression));
+            return row != null;
         } catch (NoSuchElementException ex) {
             return false;
         }
+    }
+
+    // handle pop up (temp)
+    public void pressEnter() {
+        enter.sendKeys(Keys.ENTER);
     }
 
     public void clickDeleteButton() {
@@ -170,4 +161,5 @@ public class PlanetariumPage {
     public void sendDeletionInput(String input) {
         deleteInput.sendKeys(input);
     }
+
 }

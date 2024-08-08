@@ -1,7 +1,11 @@
 package com.revature.step;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import java.time.Duration;
+
+import org.junit.Assert;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.revature.TestRun;
 
@@ -31,10 +35,16 @@ public class AddPlanetSteps {
         TestRun.planetariumPage.goToHomePage();
     }
 
-    @Given("planet {string} does not exist")
+    @Given("a planet named {string} does not exist in the planetarium")
     public void the_planet_does_not_exist(String string) {
         boolean planetDoesNotExist = TestRun.planetariumPage.verifyPlanetExists(string);
-        assertFalse("Planet " + string + " should not exist", planetDoesNotExist);
+        Assert.assertFalse("Planet " + string + " should not exist", planetDoesNotExist);
+    }
+
+    @Given("a moon named {string} should exist in the planetarium")
+    public void a_moon_should_exist_in_the_planetarium(String string) {
+        boolean moonExists = TestRun.planetariumPage.verifyMoonExists(string);
+        Assert.assertTrue("The moon " + string + " should be added", moonExists);
     }
 
     @When("the user selects planet from the dropdown")
@@ -57,10 +67,20 @@ public class AddPlanetSteps {
         TestRun.planetariumPage.clickSubmitMoonButton();
     }
 
-    @Then("a planet named {string} should be added to the planetarium")
+    @Then("a planet named {string} should exist in the planetarium")
     public void a_planet_should_be_added_to_the_planetarium(String string) {
         boolean planetExists = TestRun.planetariumPage.verifyPlanetExists(string);
-        assertTrue("The planet should be added", planetExists);
+        Assert.assertTrue("The planet should be added", planetExists);
+    }
+
+    @Then("the user is alerted to planet add failure")
+    public void the_user_should_be_alerted_to_planet_add_failure() {
+        Alert wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(3))
+                .until(ExpectedConditions.alertIsPresent());
+        Alert alert = TestRun.driver.switchTo().alert();
+        alertText = alert.getText();
+        wait.dismiss();
+        Assert.assertTrue("The user is alerted to planet add failure", alertText.contains("Something went wrong"));
     }
 
 }
