@@ -24,32 +24,32 @@ public class DeletePlanetSteps {
         TestRun.startPage.sendUsernameInput("Batman");
         TestRun.startPage.sendPasswordInput("I am the night");
         TestRun.startPage.clickLoginButton();
-        TestRun.homePage.goToHomePage();
+        TestRun.planetariumPage.goToHomePage();
     }
 
     @Given("The user selects the planet dropdown")
     public void the_user_selects_the_planet_dropdown() {
-        TestRun.homePage.selectPlanetFromDropdown();
+        TestRun.planetariumPage.selectPlanetFromDropdown();
     }
 
     @When("The user provide valid name {string}")
     public void the_user_provide_valid_name(String string) {
         // Write code here that turns the phrase above into concrete actions
-        TestRun.homePage.sendInputForDeletion(string);
+        TestRun.planetariumPage.sendDeleteNameInput(string);
     }
 
     @When("The user clicks the delete button")
     public void the_user_clicks_the_delete_button() {
         // Write code here that turns the phrase above into concrete actions
-        TestRun.homePage.clickDeleteButton();
+        TestRun.planetariumPage.clickDeleteButton();
         //maybe check for size here and store it in class variable?
-        this.celestialTableSize = TestRun.homePage.getCelestialBodyTableSize();
+        //this.celestialTableSize = TestRun.planetariumPage.getCelestialBodyTableSize();
     }
 
     @Then("The Planetarium web app should alert that {string} has been deleted")
     public void the_Planetarium_web_app_should_alert_that_has_been_deleted(String string) {
         // Write code here that turns the phrase above into concrete actions
-        Assert.assertTrue(celestialTableSize > TestRun.homePage.getCelestialBodyTableSize());
+        Assert.assertTrue(celestialTableSize > TestRun.planetariumPage.getCelestialBodyTableSize());
         //Assert.assertFalse(TestRun.homePage.checkForCelestialBody(string));
 
     }

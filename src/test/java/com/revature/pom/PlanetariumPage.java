@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class Planetarium {
+public class PlanetariumPage {
     private WebDriver driver;
 
     private String url = "http://localhost:8080/planetarium";
@@ -56,7 +56,7 @@ public class Planetarium {
     private WebElement submitMoonButton;
 
     // page prep
-    public Planetarium(WebDriver driver) {
+    public PlanetariumPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -86,6 +86,8 @@ public class Planetarium {
         submitPlanetButton.click();
     }
 
+
+
     // moon actions
     public void selectMoonFromDropdown() {
         locationSelect.click();
@@ -114,6 +116,15 @@ public class Planetarium {
     // handle pop up (temp)
     public void pressEnter() {
         enter.sendKeys(Keys.ENTER);
+    }
+
+    // Delete actions
+    public void sendDeleteNameInput(String input) {
+        deleteInput.sendKeys(input);
+    }
+
+    public void clickDeleteButton() {
+        deleteButton.click();
     }
 
 }
