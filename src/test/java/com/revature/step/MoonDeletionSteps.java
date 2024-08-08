@@ -13,14 +13,7 @@ public class MoonDeletionSteps {
     @Given("a moon name {string} exists in the planetarium")
     public void a_moon_name_exists_in_the_planetarium(String string) {
         boolean moonExists = TestRun.planetariumPage.verifyMoonExists(string);
-        if(moonExists)
-        {
-            assertTrue("the moon exists", moonExists);
-        }
-        else
-        {
-            assertFalse("The moon doesn't exist", moonExists);
-        }
+        assertTrue("The moon " + string + "exists.", moonExists);
     }
 
     @When("the user enters {string} in the moon deletion bar")
