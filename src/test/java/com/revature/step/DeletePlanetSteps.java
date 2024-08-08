@@ -32,10 +32,17 @@ public class DeletePlanetSteps {
         TestRun.planetariumPage.selectPlanetFromDropdown();
     }
 
+    @Given("A planet name {string} exists in the Planetarium homepage")
+    public void a_planet_name_exists_in_the_Planetarium_homepage(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        boolean planetExists = TestRun.planetariumPage.verifyPlanetExists(string);
+        Assert.assertTrue(planetExists);
+    }
+
     @When("The user provide valid name {string}")
     public void the_user_provide_valid_name(String string) {
         // Write code here that turns the phrase above into concrete actions
-        TestRun.planetariumPage.sendDeleteNameInput(string);
+        TestRun.planetariumPage.sendDeletionInput(string);
     }
 
     @When("The user clicks the delete button")
@@ -49,8 +56,7 @@ public class DeletePlanetSteps {
     @Then("The Planetarium web app should alert that {string} has been deleted")
     public void the_Planetarium_web_app_should_alert_that_has_been_deleted(String string) {
         // Write code here that turns the phrase above into concrete actions
-        Assert.assertTrue(celestialTableSize > TestRun.planetariumPage.getCelestialBodyTableSize());
-        //Assert.assertFalse(TestRun.homePage.checkForCelestialBody(string));
+        Assert.assertFalse(TestRun.planetariumPage.verifyPlanetExists(string));
 
     }
 

@@ -3,8 +3,19 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-08-07T21:36:00.735Z",
-        "line": 16,
+        "start_timestamp": "2024-08-08T21:02:48.042Z",
+        "before": [
+          {
+            "result": {
+              "duration": 206036700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.step.AddPlanetSteps.ensureLoggedIn()"
+            }
+          }
+        ],
+        "line": 17,
         "name": "Planet Remove - Positive Scenario - Pre Existing Name",
         "description": "\tUsers should be able to delete existing planets with valid inputs",
         "id": "planetdeletion;planet-remove---positive-scenario---pre-existing-name;;2",
@@ -13,7 +24,7 @@
         "steps": [
           {
             "result": {
-              "duration": 254543200,
+              "duration": 236541900,
               "status": "passed"
             },
             "line": 8,
@@ -25,10 +36,29 @@
           },
           {
             "result": {
-              "duration": 413072200,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.revature.step.DeletePlanetSteps.a_planet_name_exists_in_the_Planetarium_homepage(DeletePlanetSteps.java:39)\r\n\tat ✽.A planet name \"Earth\" exists in the Planetarium homepage(classpath:features/PlanetDeletion.feature:9)\r\n",
+              "duration": 2100181600,
+              "status": "failed"
             },
             "line": 9,
+            "name": "A planet name \"Earth\" exists in the Planetarium homepage",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Earth\"",
+                  "offset": 14
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.a_planet_name_exists_in_the_Planetarium_homepage(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 499900,
+              "status": "skipped"
+            },
+            "line": 10,
             "name": "The user selects the planet dropdown",
             "match": {
               "location": "com.revature.step.DeletePlanetSteps.the_user_selects_the_planet_dropdown()"
@@ -37,10 +67,9 @@
           },
           {
             "result": {
-              "duration": 51009100,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 10,
+            "line": 11,
             "name": "The user provide valid name \"Earth\"",
             "match": {
               "arguments": [
@@ -55,10 +84,10 @@
           },
           {
             "result": {
-              "duration": 50008200,
-              "status": "passed"
+              "duration": 500100,
+              "status": "skipped"
             },
-            "line": 11,
+            "line": 12,
             "name": "The user clicks the delete button",
             "match": {
               "location": "com.revature.step.DeletePlanetSteps.the_user_clicks_the_delete_button()"
@@ -67,10 +96,9 @@
           },
           {
             "result": {
-              "duration": 63012100,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 12,
+            "line": 13,
             "name": "The Planetarium web app should alert that \"Earth\" has been deleted",
             "match": {
               "arguments": [

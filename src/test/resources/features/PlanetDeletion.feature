@@ -6,6 +6,7 @@ Feature: PlanetDeletion
 	Scenario Outline: Planet Remove - Positive Scenario - Pre Existing Name
 	Users should be able to delete existing planets with valid inputs
 		Given The user is logged in and on the Planetarium homepage
+		And A planet name "<Name>" exists in the Planetarium homepage
 		And The user selects the planet dropdown
 		When The user provide valid name "<Name>"
 		And The user clicks the delete button
