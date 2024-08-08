@@ -4,7 +4,6 @@ import com.revature.TestRun;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-
 import static org.junit.Assert.assertFalse;
 
 public class MoonDeletionSteps {
@@ -22,4 +21,5 @@ public class MoonDeletionSteps {
         boolean moonExists = TestRun.planetariumPage.verifyMoonExists(string);
         assertFalse("The moon should be deleted", moonExists);
     }
+    
 }
