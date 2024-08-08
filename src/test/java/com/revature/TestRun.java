@@ -46,8 +46,8 @@ public class TestRun {
     }
 
     @AfterClass
-    public static void teardown(){
-        if(driver != null)
+    public static void teardown() {
+        if (driver != null)
             driver.quit();
     }
 
