@@ -2,7 +2,7 @@
 Feature: registrationFunctionality
 
   Scenario Outline: As a User I want to register an account into the Planetarium Application with valid inputs
-  User Registration functionality System Test for Planetarium Application
+    User Registration functionality System Test for Planetarium Application
     Given the user is on the Landing Page
     When the user clicks create an account
     When the user enters "<username>" in the username bar
@@ -22,7 +22,7 @@ Feature: registrationFunctionality
 
 
   Scenario Outline: As a User I want to not register an account into the Planetarium Application with invalid inputs
-  User Registration functionality System Test for Planetarium Application
+    User Registration functionality System Test for Planetarium Application
     Given the user is on the Landing Page
     When the user clicks create an account
     When the user enters "<username>" in the username bar

@@ -2,7 +2,7 @@
 Feature: addMoonsFunctionality
 
   Scenario Outline: As a User I want to add moons into the Planetarium Application
-  User Add Moons functionality System Test for Planetarium Application
+    User Add Moons functionality System Test for Planetarium Application
     Given the user is logged in with "<username>" and "<password>"
     When the user selects planet on the dropdown menu
     When the user selects moon on the dropdown menu
@@ -14,5 +14,5 @@ Feature: addMoonsFunctionality
 
 
     Examples:
-      | username  | password        | moon name | planet id| image src                                                                                |
-      | Batman    | I am the night  | Noom      | 1        | C:\Users\Proto\Desktop\Automation-Project\src\test\resources\Celestial-Images\moon-1.jpg |
+      | username | password       | moon name | planet id | image src                                                                                |
+      | Batman   | I am the night | Noom      | 1         | C:\Users\Proto\Desktop\Automation-Project\src\test\resources\Celestial-Images\moon-1.jpg |
