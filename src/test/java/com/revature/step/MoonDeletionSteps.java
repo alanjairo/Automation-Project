@@ -4,11 +4,17 @@ import com.revature.TestRun;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
-import org.openqa.selenium.Alert;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class MoonDeletionSteps {
 
+    @Given("a moon name {string} exists in the planetarium")
+    public void a_moon_name_exists_in_the_planetarium(String string) {
+        boolean moonExists = TestRun.planetariumPage.verifyMoonExists(string);
+        assertTrue("The moon " + string + "exists.", moonExists);
+    }
 
     @When("the user enters {string} in the moon deletion bar")
     public void the_user_enters_in_the_moon_deletion_bar(String string) { TestRun.planetariumPage.sendDeletionInput(string);}
@@ -18,9 +24,11 @@ public class MoonDeletionSteps {
         TestRun.planetariumPage.clickDeleteButton();
     }
 
-    @Then("the moon was deleted")
-    public void the_moon_was_deleted() {
-
-            Assert.assertTrue("TestMoon Deletion Successful",true);
+    @Then("the moon was deleted {string}")
+    public void the_moon_was_deleted(String string) {
+        boolean moonExists = TestRun.planetariumPage.verifyMoonExists(string);
+        assertFalse("The moon should be deleted", moonExists);
     }
+
+
 }
