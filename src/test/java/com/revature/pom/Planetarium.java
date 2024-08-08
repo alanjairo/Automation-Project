@@ -3,11 +3,13 @@ package com.revature.pom;
 import java.io.File;
 import java.util.List;
 
+import com.revature.TestRun;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 public class Planetarium {
@@ -128,6 +130,8 @@ public class Planetarium {
         enter.sendKeys(Keys.ENTER);
     }
 
+
+
     // check if celestial body present
     public boolean checkForCelestialBody(String body) {
         for (WebElement celestialBody : celestialTable) {
@@ -136,6 +140,10 @@ public class Planetarium {
             }
         }
         return false;
+    }
+
+    public int getCelestialBodyTableSize() {
+        return celestialTable.size();
     }
 
 }
