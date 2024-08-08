@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-08-08T21:02:48.042Z",
+        "start_timestamp": "2024-08-08T21:13:29.433Z",
         "before": [
           {
             "result": {
-              "duration": 206036700,
+              "duration": 209037300,
               "status": "passed"
             },
             "match": {
@@ -24,7 +24,7 @@
         "steps": [
           {
             "result": {
-              "duration": 236541900,
+              "duration": 231540200,
               "status": "passed"
             },
             "line": 8,
@@ -36,9 +36,8 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.revature.step.DeletePlanetSteps.a_planet_name_exists_in_the_Planetarium_homepage(DeletePlanetSteps.java:39)\r\n\tat ✽.A planet name \"Earth\" exists in the Planetarium homepage(classpath:features/PlanetDeletion.feature:9)\r\n",
-              "duration": 2100181600,
-              "status": "failed"
+              "duration": 52007500,
+              "status": "passed"
             },
             "line": 9,
             "name": "A planet name \"Earth\" exists in the Planetarium homepage",
@@ -55,8 +54,8 @@
           },
           {
             "result": {
-              "duration": 499900,
-              "status": "skipped"
+              "duration": 315554900,
+              "status": "passed"
             },
             "line": 10,
             "name": "The user selects the planet dropdown",
@@ -67,7 +66,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 61009900,
+              "status": "passed"
             },
             "line": 11,
             "name": "The user provide valid name \"Earth\"",
@@ -84,8 +84,8 @@
           },
           {
             "result": {
-              "duration": 500100,
-              "status": "skipped"
+              "duration": 33506500,
+              "status": "passed"
             },
             "line": 12,
             "name": "The user clicks the delete button",
@@ -96,7 +96,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 2081218900,
+              "status": "passed"
             },
             "line": 13,
             "name": "The Planetarium web app should alert that \"Earth\" has been deleted",
