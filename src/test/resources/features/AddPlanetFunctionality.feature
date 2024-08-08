@@ -46,7 +46,7 @@ Feature: Add Planet Functionality
 
   Scenario Outline: Neg - Add Planet - Name Not Unique (moon) - Pic Valid
     Given the user is on the Planetarium Page
-    And a moon named "<planetName>" exists in the planetarium
+    And a moon name "<planetName>" exists in the planetarium
     When the user selects planet from the dropdown
     And the user enters "<planetName>" in the planet name input
     And the user chooses "<planetImage>" for the planet image input
@@ -72,7 +72,7 @@ Feature: Add Planet Functionality
 
   Scenario Outline: Neg - Add Planet - Name Not Unique (moon) - Pic Empty
     Given the user is on the Planetarium Page
-    And a moon named "<planetName>" exists in the planetarium
+    And a moon name "<planetName>" exists in the planetarium
     When the user selects planet from the dropdown
     And the user enters "<planetName>" in the planet name input
     And the user clicks the Submit Planet button

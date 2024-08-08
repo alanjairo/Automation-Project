@@ -41,12 +41,6 @@ public class AddPlanetSteps {
         Assert.assertFalse("Planet " + string + " should not exist", planetDoesNotExist);
     }
 
-    @Given("a moon named {string} exists in the planetarium")
-    public void a_moon_should_exist_in_the_planetarium(String string) {
-        boolean moonExists = TestRun.planetariumPage.verifyMoonExists(string);
-        Assert.assertTrue("The moon " + string + " should be added", moonExists);
-    }
-
     @When("the user selects planet from the dropdown")
     public void the_user_selects_planet_from_the_dropdown() {
         TestRun.planetariumPage.selectPlanetFromDropdown();
