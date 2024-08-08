@@ -154,6 +154,7 @@ public class PlanetariumPage {
         enter.sendKeys(Keys.ENTER);
     }
 
+    // Deletion steps
     public void clickDeleteButton() {
         deleteButton.click();
     }
@@ -163,3 +164,4 @@ public class PlanetariumPage {
     }
 
 }
+
