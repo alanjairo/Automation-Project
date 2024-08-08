@@ -41,7 +41,7 @@ public class AddPlanetSteps {
         Assert.assertFalse("Planet " + string + " should not exist", planetDoesNotExist);
     }
 
-    @Given("a moon named {string} should exist in the planetarium")
+    @Given("a moon named {string} exists in the planetarium")
     public void a_moon_should_exist_in_the_planetarium(String string) {
         boolean moonExists = TestRun.planetariumPage.verifyMoonExists(string);
         Assert.assertTrue("The moon " + string + " should be added", moonExists);
@@ -67,7 +67,7 @@ public class AddPlanetSteps {
         TestRun.planetariumPage.clickSubmitMoonButton();
     }
 
-    @Then("a planet named {string} should exist in the planetarium")
+    @Then("a planet named {string} exists in the planetarium")
     public void a_planet_should_be_added_to_the_planetarium(String string) {
         boolean planetExists = TestRun.planetariumPage.verifyPlanetExists(string);
         Assert.assertTrue("The planet should be added", planetExists);
@@ -82,5 +82,4 @@ public class AddPlanetSteps {
         wait.dismiss();
         Assert.assertTrue("The user is alerted to planet add failure", alertText.contains("Something went wrong"));
     }
-
 }
