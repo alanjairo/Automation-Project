@@ -1,15 +1,12 @@
 package com.revature.pom;
 
 import java.io.File;
-import java.util.List;
 
-import com.revature.TestRun;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 public class Planetarium {
@@ -27,9 +24,6 @@ public class Planetarium {
     // select planet or moon
     @FindBy(id = "locationSelect")
     private WebElement locationSelect;
-
-    @FindBy(xpath = "//*[@id=\"celestialTable\"]//td[3]") //should grab the planet or moon names from table
-    private List<WebElement> celestialTable;
 
     // deletion interactions
     @FindBy(id = "deleteInput")
@@ -92,14 +86,6 @@ public class Planetarium {
         submitPlanetButton.click();
     }
 
-    public void sendInputForDeletion(String toBeDeleted) {
-        deleteInput.sendKeys(toBeDeleted);
-    }
-
-    public void clickDeleteButton() {
-        deleteButton.click();
-    }
-
     // moon actions
     public void selectMoonFromDropdown() {
         locationSelect.click();
@@ -128,22 +114,6 @@ public class Planetarium {
     // handle pop up (temp)
     public void pressEnter() {
         enter.sendKeys(Keys.ENTER);
-    }
-
-
-
-    // check if celestial body present
-    public boolean checkForCelestialBody(String body) {
-        for (WebElement celestialBody : celestialTable) {
-            if(celestialBody.getText().equals(body)){
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public int getCelestialBodyTableSize() {
-        return celestialTable.size();
     }
 
 }
