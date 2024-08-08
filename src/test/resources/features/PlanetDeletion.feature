@@ -7,8 +7,8 @@ Feature: PlanetDeletion
 	Users should be able to delete existing planets with valid inputs
 		Given The user is logged in and on the Planetarium homepage
 		And A planet name "<Name>" exists in the Planetarium homepage
-		And The user selects the planet dropdown
-		When The user provide valid name "<Name>"
+		When The user selects planet from the dropdown
+		When The user provides name "<Name>" in deletion box
 		And The user clicks the delete button
 		Then The Planetarium web app should alert that "<Name>" has been deleted
 
