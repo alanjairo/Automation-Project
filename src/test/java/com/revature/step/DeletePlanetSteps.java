@@ -65,7 +65,7 @@ public class DeletePlanetSteps {
         Alert alert = TestRun.driver.switchTo().alert();
         alertText = alert.getText();
         wait.dismiss();
-        Assert.assertTrue("The user is alerted to planet deletion failure", alertText.contains("Failed to planet planet with name"));
+        Assert.assertTrue("The user is alerted to planet deletion failure", alertText.contains("Failed to planet with name"));
     }
 
     @When("a planet name {string} exists in the planetarium")
