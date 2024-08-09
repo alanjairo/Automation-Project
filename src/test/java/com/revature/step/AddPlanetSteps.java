@@ -69,7 +69,7 @@ public class AddPlanetSteps {
 
     @Then("the user is alerted to planet add failure")
     public void the_user_should_be_alerted_to_planet_add_failure() {
-        Alert wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(3))
+        Alert wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(1))
                 .until(ExpectedConditions.alertIsPresent());
         Alert alert = TestRun.driver.switchTo().alert();
         alertText = alert.getText();

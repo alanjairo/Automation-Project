@@ -52,7 +52,7 @@ Feature: Add Planet Functionality
     And the user chooses "<planetImage>" for the planet image input
     And the user clicks the Submit Planet button
     Then the user is alerted to planet add failure
-    Then a planet named "<planetName>" does not exist in the planetarium
+    And a planet named "<planetName>" does not exist in the planetarium
 
     Examples:
       | planetName        | planetImage                                      |
