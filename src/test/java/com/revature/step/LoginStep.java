@@ -39,7 +39,7 @@ public class LoginStep {
     @Then("the user should be on the planetarium page")
 
     public void the_user_should_be_on_the_planetarium_page() {
-        TestRun.wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("Home")));
+        TestRun.wait.until(ExpectedConditions.titleIs("Home"));
         Assert.assertEquals("Home", TestRun.driver.getTitle());
 
     }
