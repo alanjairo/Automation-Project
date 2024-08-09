@@ -11,7 +11,7 @@ Feature: PlanetDeletion
 		When The user selects planet from the dropdown
 		When the user enters "<planet_name>" in the planet deletion bar
 		And The user clicks the delete button
-		Then the planetarium
+		Then The planetarium web app should alert that "<Name>" has been deleted
 
 	Examples: 
 		| Name  |

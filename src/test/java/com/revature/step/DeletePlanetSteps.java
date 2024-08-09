@@ -20,6 +20,15 @@ public class DeletePlanetSteps {
 
     public static String alertText;
 
+    @Given("The user is logged in and on the Planetarium homepage")
+    public void the_user_is_logged_in_and_on_the_Planetarium_homepage() {
+        // Write code here that turns the phrase above into concrete actions
+        TestRun.startPage.goToStartPage();
+        TestRun.startPage.sendUsernameInput("Batman");
+        TestRun.startPage.sendPasswordInput("I am the night");
+        TestRun.startPage.clickLoginButton();
+        TestRun.planetariumPage.goToHomePage();
+    }
 
     @Given("A planet name {string} exists in the Planetarium homepage")
     public void a_planet_name_exists_in_the_Planetarium_homepage(String string) {
@@ -44,7 +53,7 @@ public class DeletePlanetSteps {
         TestRun.planetariumPage.clickDeleteButton();
     }
 
-    @Then("The Planetarium web app should alert that {string} has been deleted")
+    @Then("The planetarium web app should alert that {string} has been deleted")
     public void the_planetarium_web_app_should_alert_that_has_been_deleted(String string) {
         // Write code here that turns the phrase above into concrete actions
         Assert.assertFalse(TestRun.planetariumPage.verifyPlanetExists(string));
@@ -56,7 +65,7 @@ public class DeletePlanetSteps {
         Alert alert = TestRun.driver.switchTo().alert();
         alertText = alert.getText();
         wait.dismiss();
-        Assert.assertTrue("The user is alerted to planet deletion failure", alertText.contains("Failed to planet moon with name"));
+        Assert.assertTrue("The user is alerted to planet deletion failure", alertText.contains("Failed to planet planet with name"));
     }
 
     @When("a planet name {string} exists in the planetarium")
