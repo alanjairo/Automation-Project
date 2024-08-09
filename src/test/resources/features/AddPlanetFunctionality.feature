@@ -5,7 +5,7 @@ Feature: Add Planet Functionality
     Given the user is logged in
 
   # POSITIVE SCENARIOS
-  Scenario Outline: Pos - Add Planet - Name Unique - Pic Valid
+  Scenario Outline: (pass) Pos - Add Planet - Name Unique - Pic Valid
     Given the user is on the Planetarium Page
     And a planet named "<planetName>" does not exist in the planetarium
     When the user selects planet from the dropdown
@@ -18,7 +18,7 @@ Feature: Add Planet Functionality
       | planetName                     | planetImage                                      |
       | I am the planet named Mars!!!! | src/test/resources/Celestial-Images/planet-2.jpg |
 
-  Scenario Outline: Pos - Add Planet - Name Unique - Pic Empty
+  Scenario Outline: (fail) Pos - Add Planet - Name Unique - Pic Empty
     Given the user is on the Planetarium Page
     And a planet named "<planetName>" does not exist in the planetarium
     When the user selects planet from the dropdown
@@ -31,7 +31,7 @@ Feature: Add Planet Functionality
       | I am the planet named Venus!!! |
 
   # NEGATIVE SCENARIOS - NAME NOT UNIQUE
-  Scenario Outline: Neg - Add Planet - Name Not Unique (planet) - Pic Valid
+  Scenario Outline: (pass) Neg - Add Planet - Name Not Unique (planet) - Pic Valid
     Given the user is on the Planetarium Page
     And a planet named "<planetName>" exists in the planetarium
     When the user selects planet from the dropdown
@@ -44,7 +44,7 @@ Feature: Add Planet Functionality
       | planetName          | planetImage                                      |
       | ThisNameTakenPlanet | src/test/resources/Celestial-Images/planet-1.jpg |
 
-  Scenario Outline: Neg - Add Planet - Name Not Unique (moon) - Pic Valid
+  Scenario Outline: (fail) Neg - Add Planet - Name Not Unique (moon) - Pic Valid
     Given the user is on the Planetarium Page
     And a moon name "<planetName>" exists in the planetarium
     When the user selects planet from the dropdown
@@ -58,7 +58,7 @@ Feature: Add Planet Functionality
       | planetName        | planetImage                                      |
       | ThisNameTakenMoon | src/test/resources/Celestial-Images/planet-1.jpg |
 
-  Scenario Outline: Neg - Add Planet - Name Not Unique (planet) - Pic Empty
+  Scenario Outline: (fail) Neg - Add Planet - Name Not Unique (planet) - Pic Empty
     Given the user is on the Planetarium Page
     And a planet named "<planetName>" exists in the planetarium
     When the user selects planet from the dropdown
@@ -70,7 +70,7 @@ Feature: Add Planet Functionality
       | planetName          |
       | ThisNameTakenPlanet |
 
-  Scenario Outline: Neg - Add Planet - Name Not Unique (moon) - Pic Empty
+  Scenario Outline: (fail) Neg - Add Planet - Name Not Unique (moon) - Pic Empty
     Given the user is on the Planetarium Page
     And a moon name "<planetName>" exists in the planetarium
     When the user selects planet from the dropdown
@@ -84,7 +84,7 @@ Feature: Add Planet Functionality
       | ThisNameTakenMoon |
 
   # NEGATIVE SCENARIOS - NAME TOO LONG
-  Scenario Outline: Neg - Add Planet - Name Too Long - Pic Valid
+  Scenario Outline: (pass) Neg - Add Planet - Name Too Long - Pic Valid
     Given the user is on the Planetarium Page
     And a planet named "<planetName>" does not exist in the planetarium
     When the user selects planet from the dropdown
@@ -98,7 +98,7 @@ Feature: Add Planet Functionality
       | planetName                      | planetImage                                      |
       | Name Too Long Picture Valid++++ | src/test/resources/Celestial-Images/planet-1.jpg |
 
-  Scenario Outline: Neg - Add Planet - Name Too Long - Pic Empty
+  Scenario Outline: (fail) Neg - Add Planet - Name Too Long - Pic Empty
 
     Given the user is on the Planetarium Page
     And a planet named "<planetName>" does not exist in the planetarium
@@ -113,7 +113,7 @@ Feature: Add Planet Functionality
       | Name Too Long Picture Valid++++ |
 
   # NEGATIVE SCENARIOS - Picture Invalid
-  Scenario Outline: Neg - Add Planet - Name Unique - Pic Invalid
+  Scenario Outline: (fail) Neg - Add Planet - Name Unique - Pic Invalid type
 
     Given the user is on the Planetarium Page
     And a planet named "<planetName>" does not exist in the planetarium
@@ -128,7 +128,7 @@ Feature: Add Planet Functionality
       | planetName | planetImage                                        |
       | UniqueName | src/test/resources/Celestial-Images/notAnImage.txt |
 
-  Scenario Outline: Neg - Add Planet - Name Not Unique (Planet) - Pic Invalid
+  Scenario Outline: (fail) Neg - Add Planet - Name Not Unique (Planet) - Pic Invalid type
 
     Given the user is on the Planetarium Page
     And a planet named "<planetName>" exists in the planetarium
@@ -142,7 +142,7 @@ Feature: Add Planet Functionality
       | planetName          | planetImage                                        |
       | ThisNameTakenPlanet | src/test/resources/Celestial-Images/notAnImage.txt |
 
-  Scenario Outline: Neg - Add Planet - Name Not Unique (Moon) - Pic Invalid
+  Scenario Outline: (fail) Neg - Add Planet - Name Not Unique (Moon) - Pic Invalid type
 
     Given the user is on the Planetarium Page
     And a moon name "<planetName>" exists in the planetarium
@@ -157,7 +157,7 @@ Feature: Add Planet Functionality
       | planetName          | planetImage                                        |
       | ThisNameTakenPlanet | src/test/resources/Celestial-Images/notAnImage.txt |
 
-  Scenario Outline: Neg - Add Planet - Name Too Long - Pic Invalid
+  Scenario Outline: (fail) Neg - Add Planet - Name Too Long - Pic Invalid type
     Given the user is on the Planetarium Page
     And a planet named "<planetName>" does not exist in the planetarium
     When the user selects planet from the dropdown
