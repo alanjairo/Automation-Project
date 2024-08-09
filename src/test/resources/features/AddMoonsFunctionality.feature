@@ -15,4 +15,4 @@ Feature: addMoonsFunctionality
 
     Examples:
       | username | password       | moon name | planet id | image src                                                                                |
-      | Batman   | I am the night | Noom      | 1         | C:\Users\Proto\Desktop\Automation-Project\src\test\resources\Celestial-Images\moon-1.jpg |
+      | Batman   | I am the night | Noom      | 1         | src\test\resources\Celestial-Images\moon-1.jpg |
