@@ -32,15 +32,15 @@ public class MoonDeletionSteps {
         TestRun.planetariumPage.clickDeleteButton();
     }
 
-    @Then("the moon was deleted {string}")
-    public void the_moon_was_deleted(String string) {
+    @Then("the moon {string} does not exist in the planetarium")
+    public void the_moon_does_not_exist_in_the_planetarium(String string) {
         boolean moonExists = TestRun.planetariumPage.verifyMoonExists(string);
         assertFalse("The moon should be deleted", moonExists);
     }
 
 
-    @Then("the user was altered to moon deletion failure")
-    public void the_user_was_altered_to_moon_deletion_failure() {
+    @Then("the user was alerted to moon deletion failure")
+    public void the_user_was_alerted_to_moon_deletion_failure() {
         Alert wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(3))
                 .until(ExpectedConditions.alertIsPresent());
         Alert alert = TestRun.driver.switchTo().alert();
