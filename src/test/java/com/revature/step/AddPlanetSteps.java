@@ -41,12 +41,6 @@ public class AddPlanetSteps {
         Assert.assertFalse("Planet " + string + " should not exist", planetDoesNotExist);
     }
 
-    @Given("a moon named {string} should exist in the planetarium")
-    public void a_moon_should_exist_in_the_planetarium(String string) {
-        boolean moonExists = TestRun.planetariumPage.verifyMoonExists(string);
-        Assert.assertTrue("The moon " + string + " should be added", moonExists);
-    }
-
     @When("the user selects planet from the dropdown")
     public void the_user_selects_planet_from_the_dropdown() {
         TestRun.planetariumPage.selectPlanetFromDropdown();
@@ -67,7 +61,7 @@ public class AddPlanetSteps {
         TestRun.planetariumPage.clickSubmitMoonButton();
     }
 
-    @Then("a planet named {string} should exist in the planetarium")
+    @Then("a planet named {string} exists in the planetarium")
     public void a_planet_should_be_added_to_the_planetarium(String string) {
         boolean planetExists = TestRun.planetariumPage.verifyPlanetExists(string);
         Assert.assertTrue("The planet should be added", planetExists);
@@ -75,12 +69,11 @@ public class AddPlanetSteps {
 
     @Then("the user is alerted to planet add failure")
     public void the_user_should_be_alerted_to_planet_add_failure() {
-        Alert wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(3))
+        Alert wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(1))
                 .until(ExpectedConditions.alertIsPresent());
         Alert alert = TestRun.driver.switchTo().alert();
         alertText = alert.getText();
         wait.dismiss();
         Assert.assertTrue("The user is alerted to planet add failure", alertText.contains("Something went wrong"));
     }
-
 }

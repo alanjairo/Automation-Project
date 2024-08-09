@@ -1,0 +1,1 @@
+This is not an image. As a file, it is to be used to upload as an image to test for Invalid Format handling.

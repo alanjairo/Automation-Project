@@ -1,6 +1,7 @@
 package com.revature;
 
 import com.revature.pom.LoginPage;
+
 import com.revature.pom.PlanetariumPage;
 import com.revature.pom.RegPage;
 import io.cucumber.junit.Cucumber;
@@ -34,11 +35,12 @@ public class TestRun {
     public static PlanetariumPage planetariumPage;
     public static RegPage regPage;
 
+
     @BeforeClass
     public static void setup() {
         Setup.resetTestDatabase();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         startPage = new LoginPage(driver);
         regPage = new RegPage(driver);
         planetariumPage = new PlanetariumPage(driver);
