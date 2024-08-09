@@ -9,7 +9,7 @@ Feature: PlanetDeletion
 		Given The user is logged in and on the Planetarium homepage
 		And A planet name "<Name>" exists in the Planetarium homepage
 		When The user selects planet from the dropdown
-		When the user enters "<planet_name>" in the planet deletion bar
+		When the user enters "<Name>" in the planet deletion bar
 		And The user clicks the delete button
 		Then The planetarium web app should alert that "<Name>" has been deleted
 
