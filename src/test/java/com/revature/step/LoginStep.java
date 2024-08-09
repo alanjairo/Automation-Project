@@ -13,7 +13,8 @@ import java.time.Duration;
 
 public class LoginStep {
     /*
-    i put 1 at the end of all of these becuase i forgot what to d when we have multiple steps
+     * i put 1 at the end of all of these becuase i forgot what to d when we have
+     * multiple steps
      */
 
     @Given("the user is on the Landing Page1")
@@ -56,5 +57,10 @@ public class LoginStep {
         } else {
             alert.accept();
         }
+    }
+
+    @Then("the user is logged in")
+    public void logged_in() {
+        Assert.assertEquals("Home", TestRun.driver.getTitle());
     }
 }

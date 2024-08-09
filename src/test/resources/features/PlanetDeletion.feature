@@ -4,8 +4,8 @@ Feature: PlanetDeletion
 
 	@SCRUM-TC-82 @JREQ-SCRUM-40
 	#Positive Scenario
-	Scenario Outline: Pos - Remove Planet - - Pre Existing Name
-	Users should be able to delete existing planets with valid inputs
+	Scenario Outline: Planet Remove - Positive Scenario - Pre Existing Name
+		Users should be able to delete existing planets with valid inputs
 		Given The user is logged in and on the Planetarium homepage
 		And A planet name "<Name>" exists in the Planetarium homepage
 		When The user selects planet from the dropdown

@@ -26,7 +26,6 @@ public class AddMoonSteps {
         TestRun.planetariumPage.sendOrbitedPlanetInput(string);
     }
 
-
     @When("the user adds {string} in the add image file button")
     public void the_user_adds_in_the_add_image_file_button(String string) {
         TestRun.planetariumPage.provideValidMoonImage(string);

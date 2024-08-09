@@ -21,8 +21,7 @@ public class RegistrationSteps {
     }
 
     @Given("the user is logged in with {string} and {string}")
-    public void user_logged_in(String s1, String s2)
-    {
+    public void user_logged_in(String s1, String s2) {
         TestRun.startPage.goToStartPage();
         TestRun.startPage.sendUsernameInput(s1);
         TestRun.startPage.sendPasswordInput(s2);
@@ -53,19 +52,17 @@ public class RegistrationSteps {
     public void the_user_should_be_prompted_that_an_account_was_created() throws InterruptedException {
 
         /*
-            The code here gives selenium a little bit of time to allow it to
-            interact with the alert that pops up
-        */
+         * The code here gives selenium a little bit of time to allow it to
+         * interact with the alert that pops up
+         */
 
-        Alert wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(3)).until(ExpectedConditions.alertIsPresent());
+        Alert wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(3))
+                .until(ExpectedConditions.alertIsPresent());
         Alert alert = TestRun.driver.switchTo().alert();
         alertText = alert.getText();
-        if (alertText.contains("Account creation failed"))
-        {
+        if (alertText.contains("Account creation failed")) {
             wait.dismiss();
-        }
-        else
-        {
+        } else {
             wait.accept();
         }
     }
@@ -74,28 +71,19 @@ public class RegistrationSteps {
     public void the_user_presses_handles_alert_to_continue() {
 
         /*
-            The code here will return true with no message
-            into Cucumber and return false with a "creation failed" message
-        */
+         * The code here will return true with no message
+         * into Cucumber and return false with a "creation failed" message
+         */
 
-        if (alertText.contains("Account created successfully"))
-        {
-            Assert.assertTrue("Account Creation Failed",alertText.contains("Account created successfully"));
-        }
-        else if (alertText.contains("Account creation failed"))
-        {
+        if (alertText.contains("Account created successfully")) {
+            Assert.assertTrue("Account Creation Failed", alertText.contains("Account created successfully"));
+        } else if (alertText.contains("Account creation failed")) {
             Assert.fail("Test Prompted Account Creation Failed");
         }
     }
 
     @Then("the user should exit the prompted account not created alert")
     public void the_user_exits_handles_alert_to_continue() {
-        Assert.assertTrue("Test Prompted Account Creation Successful",alertText.contains("Account creation failed"));
-    }
-
-    @Then("the user is logged in")
-    public void logged_in()
-    {
-        Assert.assertEquals("Home", TestRun.driver.getTitle());
+        Assert.assertTrue("Test Prompted Account Creation Successful", alertText.contains("Account creation failed"));
     }
 }
