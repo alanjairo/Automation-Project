@@ -31,7 +31,7 @@ Feature: moonDeletionFeature
 
 
   #Negative Scenario
-  Scenario Outline: Neg - Remove Moon - Invalid Name
+  Scenario Outline: Neg - Remove Moon - Deleted Name
     Given the user is on the Planetarium Page
     Given the moon "<moon_name>" does not exist in the planetarium
     When the user enters "<moon_name>" in the moon deletion bar
