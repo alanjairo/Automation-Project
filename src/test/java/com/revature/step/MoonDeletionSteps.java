@@ -6,6 +6,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class MoonDeletionSteps {
 
@@ -20,7 +24,8 @@ public class MoonDeletionSteps {
 
     @Then("the moon was deleted")
     public void the_moon_was_deleted() {
-
+            Alert wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(3)).until(ExpectedConditions.alertIsPresent());
             Assert.assertTrue("TestMoon Deletion Successful",true);
+            wait.accept();
     }
 }
