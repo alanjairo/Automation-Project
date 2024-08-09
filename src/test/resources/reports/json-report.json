@@ -3,11 +3,19 @@
     "line": 2,
     "elements": [
       {
+<<<<<<< HEAD
         "start_timestamp": "2024-08-07T21:57:34.492Z",
         "before": [
           {
             "result": {
               "duration": 457551100,
+=======
+        "start_timestamp": "2024-08-08T21:13:29.433Z",
+        "before": [
+          {
+            "result": {
+              "duration": 209037300,
+>>>>>>> ccbd5ef7e26709e6c267561ec94ef6b6a9994992
               "status": "passed"
             },
             "match": {
@@ -15,15 +23,23 @@
             }
           }
         ],
+<<<<<<< HEAD
         "line": 15,
         "name": "As a User I want to login into the planetarium so that i can add and upload planets",
         "description": "  and moons",
         "id": "loginfunctionality;as-a-user-i-want-to-login-into-the-planetarium-so-that-i-can-add-and-upload-planets;;2",
+=======
+        "line": 17,
+        "name": "Planet Remove - Positive Scenario - Pre Existing Name",
+        "description": "\tUsers should be able to delete existing planets with valid inputs",
+        "id": "planetdeletion;planet-remove---positive-scenario---pre-existing-name;;2",
+>>>>>>> ccbd5ef7e26709e6c267561ec94ef6b6a9994992
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
+<<<<<<< HEAD
               "duration": 293274000,
               "status": "passed"
             },
@@ -31,11 +47,21 @@
             "name": "the user is on the Landing Page",
             "match": {
               "location": "com.revature.step.RegistrationSteps.the_user_is_on_the_Landing_Page()"
+=======
+              "duration": 231540200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The user is logged in and on the Planetarium homepage",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_user_is_logged_in_and_on_the_Planetarium_homepage()"
+>>>>>>> ccbd5ef7e26709e6c267561ec94ef6b6a9994992
             },
             "keyword": "Given "
           },
           {
             "result": {
+<<<<<<< HEAD
               "duration": 88335500,
               "status": "passed"
             },
@@ -49,11 +75,57 @@
                 }
               ],
               "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_username_bar(java.lang.String)"
+=======
+              "duration": 52007500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "A planet name \"Earth\" exists in the Planetarium homepage",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Earth\"",
+                  "offset": 14
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.a_planet_name_exists_in_the_Planetarium_homepage(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 315554900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The user selects the planet dropdown",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_user_selects_the_planet_dropdown()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 61009900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The user provide valid name \"Earth\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Earth\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.the_user_provide_valid_name(java.lang.String)"
+>>>>>>> ccbd5ef7e26709e6c267561ec94ef6b6a9994992
             },
             "keyword": "When "
           },
           {
             "result": {
+<<<<<<< HEAD
               "duration": 113394700,
               "status": "passed"
             },
@@ -67,11 +139,21 @@
                 }
               ],
               "location": "com.revature.step.RegistrationSteps.the_user_enters_in_the_password_bar(java.lang.String)"
+=======
+              "duration": 33506500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The user clicks the delete button",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_user_clicks_the_delete_button()"
+>>>>>>> ccbd5ef7e26709e6c267561ec94ef6b6a9994992
             },
             "keyword": "When "
           },
           {
             "result": {
+<<<<<<< HEAD
               "duration": 50448000,
               "status": "passed"
             },
@@ -91,12 +173,28 @@
             "name": "the user should be on the planetarium page",
             "match": {
               "location": "com.revature.step.LoginStep.the_user_should_be_on_the_planetarium_page()"
+=======
+              "duration": 2081218900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "The Planetarium web app should alert that \"Earth\" has been deleted",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Earth\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.the_Planetarium_web_app_should_alert_that_has_been_deleted(java.lang.String)"
+>>>>>>> ccbd5ef7e26709e6c267561ec94ef6b6a9994992
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
+<<<<<<< HEAD
             "name": "@LoginFunctionality"
           }
         ]
@@ -196,10 +294,20 @@
         "tags": [
           {
             "name": "@LoginFunctionality"
+=======
+            "name": "@PlanetDeletion"
+          },
+          {
+            "name": "@SCRUM-TC-82"
+          },
+          {
+            "name": "@JREQ-SCRUM-40"
+>>>>>>> ccbd5ef7e26709e6c267561ec94ef6b6a9994992
           }
         ]
       }
     ],
+<<<<<<< HEAD
     "name": "LoginFunctionality",
     "description": "",
     "id": "loginfunctionality",
@@ -208,6 +316,16 @@
     "tags": [
       {
         "name": "@LoginFunctionality",
+=======
+    "name": "PlanetDeletion",
+    "description": "",
+    "id": "planetdeletion",
+    "keyword": "Feature",
+    "uri": "classpath:features/PlanetDeletion.feature",
+    "tags": [
+      {
+        "name": "@PlanetDeletion",
+>>>>>>> ccbd5ef7e26709e6c267561ec94ef6b6a9994992
         "type": "Tag",
         "location": {
           "line": 1,

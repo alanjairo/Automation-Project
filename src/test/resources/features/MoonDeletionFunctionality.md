@@ -1,15 +1,13 @@
 @MoonDeletionFunctionality
-Feature: searchFunctionality
+Feature: moonDeletionFeature
   Scenario Outline: As a User I want to login with an account into the Planetarium Application and then delete a moon
-  Moon Deletion functionality System Test for Planetarium Application
-    Given the user is on the Landing Page
-    When the user enters "<username>" in the username bar
-    When the user enters "<password>" in the password bar
-    When the user clicks the login button
-    When the user enters "moon_name" in the moon deletion bar
+    Moon Deletion functionality System Test for Planetarium Application
+    Given the user is on the Planetarium Page
+    Given a moon name "<moon_name>" exists in the planetarium
+    When the user enters "<moon_name>" in the moon deletion bar
     When the user clicks the delete button
-    Then the user should be prompted that a moon was deleted
-    Then the user should exit the prompted alert
+    Then the moon was deleted "<moon_name>"
     Examples:
-      | username | password | moon_name |
-      | Batman!| I am the night! | Luna |
+      | moon_name |
+      | Luna      |
+      | Titan     |

@@ -1,6 +1,7 @@
 package com.revature;
 
 import com.revature.pom.LoginPage;
+
 import com.revature.pom.PlanetariumPage;
 import com.revature.pom.RegPage;
 import io.cucumber.junit.Cucumber;
@@ -34,6 +35,7 @@ public class TestRun {
     public static PlanetariumPage planetariumPage;
     public static RegPage regPage;
 
+
     @BeforeClass
     public static void setup() {
         Setup.resetTestDatabase();
@@ -46,8 +48,8 @@ public class TestRun {
     }
 
     @AfterClass
-    public static void teardown(){
-        if(driver != null)
+    public static void teardown() {
+        if (driver != null)
             driver.quit();
     }
 
