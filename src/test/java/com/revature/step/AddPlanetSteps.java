@@ -9,26 +9,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.revature.TestRun;
 
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class AddPlanetSteps {
-    public static String alertText; // placeholder
-
-    private static boolean isLoggedIn = false;
-
-    @Before
-    public void ensureLoggedIn() {
-        if (!isLoggedIn) {
-            TestRun.startPage.goToStartPage();
-            TestRun.startPage.sendUsernameInput("user1");
-            TestRun.startPage.sendPasswordInput("password");
-            TestRun.startPage.clickLoginButton();
-            isLoggedIn = true;
-        }
-    }
+    public static String alertText;
 
     @Given("the user is on the Planetarium Page")
     public void the_user_is_on_the_Planetarium_Page() {
@@ -61,7 +47,7 @@ public class AddPlanetSteps {
         TestRun.planetariumPage.clickSubmitMoonButton();
     }
 
-    @Then("a planet named {string} should exist in the planetarium")
+    @Then("a planet named {string} exists in the planetarium")
     public void a_planet_should_be_added_to_the_planetarium(String string) {
         boolean planetExists = TestRun.planetariumPage.verifyPlanetExists(string);
         Assert.assertTrue("The planet should be added", planetExists);
@@ -69,12 +55,11 @@ public class AddPlanetSteps {
 
     @Then("the user is alerted to planet add failure")
     public void the_user_should_be_alerted_to_planet_add_failure() {
-        Alert wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(3))
+        Alert wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(1))
                 .until(ExpectedConditions.alertIsPresent());
         Alert alert = TestRun.driver.switchTo().alert();
         alertText = alert.getText();
         wait.dismiss();
         Assert.assertTrue("The user is alerted to planet add failure", alertText.contains("Something went wrong"));
     }
-
 }

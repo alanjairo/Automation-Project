@@ -40,7 +40,7 @@ public class TestRun {
     public static void setup() {
         Setup.resetTestDatabase();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         startPage = new LoginPage(driver);
         regPage = new RegPage(driver);
         planetariumPage = new PlanetariumPage(driver);
