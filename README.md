@@ -1,11 +1,24 @@
 ## Environment Variable for planetarium-db.db
 add variable PLANETARIUMAUTO to environment for automated planetariuim database
 
-
 ## Export Reports
 to export file for Jira, use the 
 plugin = "json:src/test/resources/reports/json-report.json"
 in the TestRunner to have a report generated in JSON file in the @CucumberOptions method
+
+## Project Presentation Order of Operations
+1. Show your final test report for the System Tests you performed
+    - this should be generated via AIO in your Jira project
+2. Show your final test report for the Acceptance Tests you performed
+    - As long as the data is organized and stored in Jira you have flexibility in how you craft this data
+4. Talk through your process on the following subjects
+    - how did you go about organizing/executing your Systems tests?
+        - show your boundary analysis value data organization
+        - showcase the tests you came up with through Error Guessing
+    - how did you go about organizing/executing your Acceptance Tests?
+    - how did you organize your defect reports?
+    - what went well during your testing process?
+    - what will you do differently during the next round of testing to build upon and/or improve on your previous testing cycle?
 
 ```
 Automation-Project
