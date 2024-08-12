@@ -32,7 +32,8 @@ Feature: Add Planet Functionality
 
   # NEGATIVE SCENARIOS - NAME NOT UNIQUE
   Scenario Outline: (pass) Neg - Add Planet - Name Not Unique (planet) - Pic Valid
-    Given the user is on the Planetarium Page
+    Given the user is logged in
+    And the user is on the Planetarium Page
     And a planet named "<planetName>" exists in the planetarium
     When the user selects planet from the dropdown
     And the user enters "<planetName>" in the planet name input

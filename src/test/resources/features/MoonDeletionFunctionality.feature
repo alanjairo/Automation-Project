@@ -76,7 +76,6 @@ Feature: moonDeletionFeature
       | moon_name |
       | Mars      |
 
-<<<<<<< HEAD
   Scenario Outline: Neg - Remove Moon - Moon Name is ID that exceeds Highest ID
     Given the user is on the Planetarium Page
     When the user selects planet on the dropdown menu
@@ -92,5 +91,3 @@ Feature: moonDeletionFeature
     Examples:
       | moon_name | planet_id | image_src                                      |
       | 12        | 2         | src\test\resources\Celestial-Images\moon-1.jpg |
-=======
->>>>>>> main
