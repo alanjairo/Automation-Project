@@ -37,7 +37,6 @@ Feature: PlanetDeletion
 			| 11     | src\test\resources\Celestial-Images\planet-1.jpg|
 
 
-
 	Scenario Outline: (pass) Neg - Remove Planet - Name Does Not Exist
 		Given the user is on the Planetarium Page
 		And A planet named "<Name>" does not exist in the Planetarium homepage
@@ -69,4 +68,4 @@ Feature: PlanetDeletion
 		Then the user was alerted to planet deletion failure
 		Examples:
 			| Name |
-			| Titan |
+			| AnotherMoon |
