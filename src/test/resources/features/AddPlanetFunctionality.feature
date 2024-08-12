@@ -122,8 +122,8 @@ Feature: Add Planet Functionality
     And a planet named "<planetName>" does not exist in the planetarium
 
     Examples:
-      | planetName | planetImage                                        |
-      | UniqueName | src/test/resources/Celestial-Images/notAnImage.txt |
+      | planetName  | planetImage                                        |
+      | UniqueName1 | src/test/resources/Celestial-Images/notAnImage.txt |
 
   Scenario Outline: (pass) Neg - Add Planet - Name Not Unique (Planet) - Pic Invalid (type)
 
@@ -151,8 +151,8 @@ Feature: Add Planet Functionality
     And a planet named "<planetName>" does not exist in the planetarium
 
     Examples:
-      | planetName          | planetImage                                        |
-      | ThisNameTakenPlanet | src/test/resources/Celestial-Images/notAnImage.txt |
+      | planetName        | planetImage                                        |
+      | ThisNameTakenMoon | src/test/resources/Celestial-Images/notAnImage.txt |
 
   Scenario Outline: (pass) Neg - Add Planet - Name Too Long - Pic Invalid (type)
     Given the user is logged in
@@ -181,8 +181,8 @@ Feature: Add Planet Functionality
     And a planet named "<planetName>" does not exist in the planetarium
 
     Examples:
-      | planetName | planetImage                                                     |
-      | UniqueName | src/test/resources/Celestial-Images/Dark.Souls.full.2068236.jpg |
+      | planetName  | planetImage                                                     |
+      | UniqueName2 | src/test/resources/Celestial-Images/Dark.Souls.full.2068236.jpg |
 
   Scenario Outline: (pass) Neg - Add Planet - Name Not Unique (Planet) - Pic Invalid (size)
 
@@ -210,8 +210,8 @@ Feature: Add Planet Functionality
     And a planet named "<planetName>" does not exist in the planetarium
 
     Examples:
-      | planetName          | planetImage                                                     |
-      | ThisNameTakenPlanet | src/test/resources/Celestial-Images/Dark.Souls.full.2068236.jpg |
+      | planetName        | planetImage                                                     |
+      | ThisNameTakenMoon | src/test/resources/Celestial-Images/Dark.Souls.full.2068236.jpg |
 
   Scenario Outline: (pass) Neg - Add Planet - Name Too Long - Pic Invalid (size)
     Given the user is logged in
