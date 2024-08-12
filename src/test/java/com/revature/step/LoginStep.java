@@ -1,6 +1,7 @@
 package com.revature.step;
 
 import com.revature.TestRun;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -16,13 +17,27 @@ public class LoginStep {
     i put 1 at the end of all of these becuase i forgot what to d when we have multiple steps
      */
 
-    @Given("the user is on the Landing Page1")
-    public void the_user_is_on_the_Landing_Page() {
-        TestRun.startPage.goToStartPage();
+
+
+    public void aRegisterdUser() {
+
+            TestRun.startPage.goToStartPage();
+            TestRun.startPage.clickCreateAccountLink();
+            TestRun.startPage.sendUsernameInput("Batman and Robin Unite Now!!!!");
+            TestRun.startPage.sendPasswordInput("Riddler and Joker Disagree!!!!");
+            TestRun.regPage.clickAccountSubmitButton();
     }
 
+
+
+    @Given("the username and password were registered")
+    public void the_user_is_on_the_Landing_Page() {
+        aRegisterdUser();
+        TestRun.startPage.goToStartPage();
+    }
     @When("the user enters {string} in the username bar1")
     public void the_user_enters_in_the_username_bar(String string) {
+        System.out.println(string);
         TestRun.startPage.sendUsernameInput(string);
     }
 
