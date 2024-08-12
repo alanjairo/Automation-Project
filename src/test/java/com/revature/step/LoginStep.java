@@ -24,6 +24,7 @@ public class LoginStep {
         TestRun.startPage.sendUsernameInput("user1");
         TestRun.startPage.sendPasswordInput("password");
         TestRun.startPage.clickLoginButton();
+        TestRun.wait.until(ExpectedConditions.titleIs("Home"));
         Assert.assertEquals("Home", TestRun.driver.getTitle());
     }
 

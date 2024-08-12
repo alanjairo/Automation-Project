@@ -1,14 +1,12 @@
 @AddMoonsFunctionality
-Feature: addMoonsFunctionality
+Feature: AddMoonsFunctionality
 
-  Background:
+  #Positive Scenarios
+  @SCRUM-TC-33 @JREQ-SCRUM-49
+  Scenario Outline: Pos - Add Moon - Valid Inputs
+  Users should be able to add Moons with valid inputs
     Given the user is logged in
-
-  # Positive Scenarios
-  # Valid Inputs
-  Scenario Outline: Pos - Add Moons - Valid Inputs
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
+    And the moon, "<moon name>" does not exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -16,31 +14,31 @@ Feature: addMoonsFunctionality
     And the user clicks submit moon button
     Then the user is verifies the moon, "<moon name>", exists in table
 
-
     Examples:
-      | moon name                      | planet id | image src                                      |
-      | I am the Moon named Noom!!!!!! | 1         | src/test/resources/Celestial-Images/moon-1.jpg |
+      | moon name                      | image src                                      | planet id |
+      | I am the Moon named Noom!!!!!! | src/test/resources/Celestial-Images/moon-1.jpg | 1         |
 
-  # Valid Inputs - No Image
+  @SCRUM-TC-34 @JREQ-SCRUM-50
   Scenario Outline: Pos - Add Moon - Valid Inputs - No Image
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
+  Users should be able to add Moons with valid inputs without image
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
     And the user clicks submit moon button
     Then the user is verifies the moon, "<moon name>", exists in table
 
-
     Examples:
       | moon name                      | planet id |
       | I am the Moon named Numa!!!!!! | 1         |
 
-  #Nagetive Scenarios
-  #Name Not Unique - Valid Image Size - Valid ID
+  #Negative Scenarios
+  @SCRUM-TC-35 @JREQ-SCRUM-52
   Scenario Outline: Neg - Add Moon - Not Unique - Valid Image Size - Valid ID
-  Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does exist
+  Users should not be able to add moons with invalid inputs
+    Given the user is logged in
+    And the moon, "<moon name>" does exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -52,10 +50,11 @@ Feature: addMoonsFunctionality
       | moon name                      | planet id | image src                                      |
       | I am the Moon named Noom!!!!!! | 1         | src/test/resources/Celestial-Images/moon-2.jpg |
 
-  #Name Too Long - Valid Image Size - Valid ID
+  @SCRUM-TC-36 @JREQ-SCRUM-53
   Scenario Outline: Neg - Add Moon - Name Too Long - Valid Image Size - Valid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
+  Users should not be able to add moons with too long name
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -65,28 +64,29 @@ Feature: addMoonsFunctionality
     And the user is verifies the moon, "<moon name>", does not exist in table
 
     Examples:
-      | moon name                       | planet id | image src                                      |
-      | I am the Moon named Numa!!!!!!! | 1         | src/test/resources/Celestial-Images/moon-2.jpg |
+      | moon name                       | image src                                      | planet id |
+      | I am the Moon named Numa!!!!!!! | src/test/resources/Celestial-Images/moon-2.jpg | 1         |
 
-  #Name Not Unique - No Image - Valid ID
+  @SCRUM-TC-37 @JREQ-SCRUM-54
   Scenario Outline: Neg - Add Moon - Name Not Unique - No Image - Valid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does exist
+  Users should not be able to add moons with non unique name
+    Given the user is logged in
+    And the moon, "<moon name>" does exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
     And the user clicks submit moon button
     Then the user is alerted that the moon was failed to be added
 
-
     Examples:
       | moon name | planet id |
       | Luna      | 1         |
 
-  #Name Too Long - No Image - Valid ID
+  @SCRUM-TC-38 @JREQ-SCRUM-55
   Scenario Outline: Neg - Add Moon - Name Too Long - No Image - Valid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
+  Users should not be able to add moons with too long name
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -98,10 +98,11 @@ Feature: addMoonsFunctionality
       | moon name                       | planet id |
       | I am the Moon named Numa!!!!!!! | 1         |
 
-  #Name is Unique - Too Large Image Size - Valid ID
+  @SCRUM-TC-39 @JREQ-SCRUM-56
   Scenario Outline: Neg - Add Moon - Name is Unique - Too Large Image Size - Valid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
+  Users should not be able to add moons with invalid inputs
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -114,11 +115,13 @@ Feature: addMoonsFunctionality
       | moon name | planet id | image src                                         |
       | Noom      | 1         | src/test/resources/Celestial-Images/CVYE1271.JPEG |
 
-  #Name Not Unique - Too Large Image Size - Valid ID
+  @SCRUM-TC-40 @JREQ-SCRUM-57
   Scenario Outline: Neg - Add Moon - Name Not Unique - Too Large Image Size - Valid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does exist
-    When the user enters "<moon name>" in the moon name bar
+  Users should not be able to add moons with invalid inputs
+    Given the user is logged in
+    And the moon, "<moon name>" does exist
+    When the user navigates to moon on the dropdown menu
+    And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
     And the user adds "<image src>" in the add image file button
     And the user clicks submit moon button
@@ -128,10 +131,11 @@ Feature: addMoonsFunctionality
       | moon name | planet id | image src                                         |
       | Luna      | 1         | src/test/resources/Celestial-Images/CVYE1271.JPEG |
 
-  #Name Too Long - Too Large Image Size - Valid ID
+  @SCRUM-TC-41 @JREQ-SCRUM-58
   Scenario Outline: Neg - Add Moon - Name Too Long - Too Large Image Size - Valid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
+  Users should not be able to add moons with invalid inputs
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -141,14 +145,15 @@ Feature: addMoonsFunctionality
     And the user is verifies the moon, "<moon name>", does not exist in table
 
     Examples:
-      | moon name                       | planet id | image src                                         |
+      | moon name                            | planet id | image src                                                 |
       | I am the Moon named Numa!!!!!!! | 1         | src/test/resources/Celestial-Images/CVYE1271.JPEG |
 
-  #Name from Planet - Valid Image Size - Valid ID
+  @SCRUM-TC-42 @JREQ-SCRUM-59
   Scenario Outline: Neg - Add Moon - Name from Planet - Valid Image Size - Valid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
-    Given the planet, "<moon name>" does exist
+  Users should not be able to add moons with plane name
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
+    And the planet, "<moon name>" does exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -161,11 +166,12 @@ Feature: addMoonsFunctionality
       | moon name | planet id | image src                                      |
       | Earth     | 1         | src/test/resources/Celestial-Images/moon-2.jpg |
 
-  #Name from Planet - Too Large Image Size - Valid ID
+  @SCRUM-TC-43 @JREQ-SCRUM-60
   Scenario Outline: Neg - Add Moon - Name from Planet - Too Large Image Size - Valid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
-    Given the planet, "<moon name>" does exist
+  Users should not be able to add moons with planet name
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
+    And the planet, "<moon name>" does exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -175,14 +181,15 @@ Feature: addMoonsFunctionality
     And the user is verifies the moon, "<moon name>", does not exist in table
 
     Examples:
-      | moon name  | planet id | image src                                         |
-      | Mars       | 1         | src/test/resources/Celestial-Images/CVYE1271.JPEG |
+      | moon name | planet id | image src                                         |
+      | Mars      | 1         | src/test/resources/Celestial-Images/CVYE1271.JPEG |
 
-    #Name from planet - No Image - Valid ID
+  @SCRUM-TC-44 @JREQ-SCRUM-61
   Scenario Outline: Neg - Add Moon - Name from planet - No Image - Valid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
-    Given the planet, "<moon name>" does exist
+  Users should not be able to add moons with planet name
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
+    And the planet, "<moon name>" does exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -190,15 +197,15 @@ Feature: addMoonsFunctionality
     Then the user is alerted that the moon was failed to be added
     And the user is verifies the moon, "<moon name>", does not exist in table
 
-
     Examples:
-      | moon name               | planet id |
-      | ThisNameTakenPlanet     | 4         |
+      | moon name           | planet id |
+      | ThisNameTakenPlanet | 1         |
 
-  #Name Not Unique - Valid Image Size - Invalid ID
+  @SCRUM-TC-51 @JREQ-SCRUM-71
   Scenario Outline: Neg - Add Moon - Name Not Unique - Valid Image Size - Invalid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does exist
+  Users should not be able to add moon with invalid inputs and invalid id
+    Given the user is logged in
+    And the moon, "<moon name>" does exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -210,10 +217,11 @@ Feature: addMoonsFunctionality
       | moon name | planet id | image src                                      |
       | Luna      | 9         | src/test/resources/Celestial-Images/moon-2.jpg |
 
-  #Name Too Long - Valid Image Size - Invalid ID
+  @SCRUM-TC-52 @JREQ-SCRUM-72
   Scenario Outline: Neg - Add Moon - Name Too Long - Valid Image Size - Invalid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
+  Users should not be able to add moon with invalid inputs and invalid id
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -223,13 +231,14 @@ Feature: addMoonsFunctionality
     And the user is verifies the moon, "<moon name>", does not exist in table
 
     Examples:
-      | moon name                            | planet id | image src                                      |
-      | I am the Moon named Numa!!!!!!!      | 9         | src/test/resources/Celestial-Images/moon-2.jpg |
+      | moon name                       | planet id | image src                                      |
+      | I am the Moon named Numa!!!!!!! | 9         | src/test/resources/Celestial-Images/moon-2.jpg |
 
-  #Name Not Unique - No Image - Invalid ID
+  @SCRUM-TC-53 @JREQ-SCRUM-73
   Scenario Outline: Neg - Add Moon - Name Not Unique - No Image - Invalid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does exist
+  Users should not be able to add moon with invalid inputs and invalid id
+    Given the user is logged in
+    And the moon, "<moon name>" does exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -237,13 +246,14 @@ Feature: addMoonsFunctionality
     Then the user is alerted that the moon was failed to be added
 
     Examples:
-      | moon name             | planet id |
-      | ThisNameTakenMoon     | 9         |
+      | moon name         | planet id |
+      | ThisNameTakenMoon | 9         |
 
-  #Name Too Long - No Image - Invalid ID
+  @SCRUM-TC-54 @JREQ-SCRUM-74
   Scenario Outline: Neg - Add Moon - Name Too Long - No Image - Invalid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
+  Users should not be able to add moon with invalid inputs and invalid id
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -252,13 +262,14 @@ Feature: addMoonsFunctionality
     And the user is verifies the moon, "<moon name>", does not exist in table
 
     Examples:
-      | moon name                           | planet id |
-      | I am the Moon named Numa!!!!!!!     | 9         |
+      | moon name                       | planet id |
+      | I am the Moon named Numa!!!!!!! | Invalid   |
 
-  #Name is Unique - Too Large Image Size - Invalid ID
+  @SCRUM-TC-55 @JREQ-SCRUM-75
   Scenario Outline: Neg - Add Moon - Name is Unique - Too Large Image Size - Invalid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
+  Users should not be able to add moon with invalid inputs and invalid id
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -271,10 +282,11 @@ Feature: addMoonsFunctionality
       | moon name | planet id | image src                                         |
       | Lunar     | 9         | src/test/resources/Celestial-Images/CVYE1271.JPEG |
 
-  #Name Not Unique - Too Large Image Size - Invalid ID
+  @SCRUM-TC-56 @JREQ-SCRUM-76
   Scenario Outline: Neg - Add Moon - Name Not Unique - Too Large Image Size - Invalid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does exist
+  Users should not be able to add moon with invalid inputs and invalid id
+    Given the user is logged in
+    And the moon, "<moon name>" does exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -286,10 +298,11 @@ Feature: addMoonsFunctionality
       | moon name | planet id | image src                                         |
       | Luna      | 9         | src/test/resources/Celestial-Images/CVYE1271.JPEG |
 
-  #Name Too Long - Too Large Image Size - Invalid ID
+  @SCRUM-TC-57 @JREQ-SCRUM-77
   Scenario Outline: Neg - Add Moon - Name Too Long - Too Large Image Size - Invalid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
+  Users should not be able to add moon with invalid inputs and invalid id
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -299,13 +312,15 @@ Feature: addMoonsFunctionality
     And the user is verifies the moon, "<moon name>", does not exist in table
 
     Examples:
-      | moon name                            | planet id | image src                                         |
-      | I am the Moon named Numa!!!!!!!      | 9         | src/test/resources/Celestial-Images/CVYE1271.JPEG |
+      | moon name                       | planet id | image src                                         |
+      | I am the Moon named Numa!!!!!!! | 9         | src/test/resources/Celestial-Images/CVYE1271.JPEG |
 
-  #Name from Planet - Valid Image Size - Invalid ID
+  @SCRUM-TC-58 @JREQ-SCRUM-78
   Scenario Outline: Neg - Add Moon - Name from Planet - Valid Image Size - Invalid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the planet, "<moon name>" does exist
+  Users should not be able to add moon with invalid inputs and invalid id
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
+    And the planet, "<moon name>" does exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -315,14 +330,15 @@ Feature: addMoonsFunctionality
     And the user is verifies the moon, "<moon name>", does not exist in table
 
     Examples:
-      | moon name                | planet id | image src                                      |
-      | ThisNameTakenPlanet      | 9         | src/test/resources/Celestial-Images/moon-2.jpg |
+      | moon name           | planet id | image src                                      |
+      | ThisNameTakenPlanet | 9         | src/test/resources/Celestial-Images/moon-2.jpg |
 
-  #Name from Planet - Too Large Image Size - Invalid ID
+  @SCRUM-TC-59 @JREQ-SCRUM-79
   Scenario Outline: Neg - Add Moon - Name from Planet - Too Large Image Size - Invalid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
-    Given the planet, "<moon name>" does exist
+  Users should not be able to add moon with invalid inputs and invalid id
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
+    And the planet, "<moon name>" does exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
@@ -335,18 +351,18 @@ Feature: addMoonsFunctionality
       | moon name | planet id | image src                                         |
       | Mars      | 9         | src/test/resources/Celestial-Images/CVYE1271.JPEG |
 
-  #Name from planet - No Image - Invalid ID
+  @SCRUM-TC-60 @JREQ-SCRUM-80
   Scenario Outline: Neg - Add Moon - Name from planet - No Image - Invalid ID
-  User Add Moons functionality System Test for Planetarium Application
-    Given the moon, "<moon name>" does not exist
-    Given the planet, "<moon name>" does exist
+  Users should not be able to add moon with invalid inputs and invalid id
+    Given the user is logged in
+    And the moon, "<moon name>" does not exist
+    And the planet, "<moon name>" does exist
     When the user navigates to moon on the dropdown menu
     And the user enters "<moon name>" in the moon name bar
     And the user enters "<planet id>" in the orbited planet id bar
     And the user clicks submit moon button
     Then the user is alerted that the moon was failed to be added
     And the user is verifies the moon, "<moon name>", does not exist in table
-
 
     Examples:
       | moon name | planet id |
