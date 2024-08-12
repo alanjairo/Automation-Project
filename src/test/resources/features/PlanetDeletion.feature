@@ -6,7 +6,8 @@ Feature: PlanetDeletion
 	#Positive Scenario
 	Scenario Outline: Planet Remove - Positive Scenario - Pre Existing Name
 		Users should be able to delete existing planets with valid inputs
-		Given The user is logged in and on the Planetarium homepage
+		Given the user is logged in
+		Given the user is on the Planetarium Page
 		And A planet name "<Name>" exists in the Planetarium homepage
 		When The user selects planet from the dropdown
 		When the user enters "<Name>" in the planet deletion bar
@@ -19,8 +20,9 @@ Feature: PlanetDeletion
 
 	#Negative Scenario
 	Scenario Outline: Neg - Remove Planet - Moon Name is ID that exceeds Highest ID
+		Given the user is logged in
 		Given the user is on the Planetarium Page
-		When the user selects planet on the dropdown menu
+		When the user selects planet from the dropdown
 		When the user enters "<planet_name>" in the planet name input
 		When the user chooses "<image_src>" for the planet image input
 		When the user clicks the Submit Planet button

@@ -3,6 +3,7 @@ Feature: moonDeletionFeature
 
   #Postive Scenarios
   Scenario Outline: Pos - Remove Moon -  With Pre-Existing Name
+    Given the user is logged in
     Given the user is on the Planetarium Page
     Given a moon name "<moon_name>" exists in the planetarium
     When the user enters "<moon_name>" in the moon deletion bar
@@ -14,9 +15,9 @@ Feature: moonDeletionFeature
       | Titan     |
 
   Scenario Outline: Pos - Remove Moon -  With Existing Name
+    Given the user is logged in
     Given the user is on the Planetarium Page
-    When the user selects planet on the dropdown menu
-    When the user selects moon on the dropdown menu
+    When the user navigates to moon on the dropdown menu
     When the user enters "<moon_name>" in the moon name bar
     When the user enters "<planet_id>" in the orbited planet id bar
     When the user adds "<image_src>" in the add image file button
@@ -32,9 +33,9 @@ Feature: moonDeletionFeature
 
   #Negative Scenario
   Scenario Outline: Neg - Remove Moon - Moon Name is ID that exceeds Highest ID
+    Given the user is logged in
     Given the user is on the Planetarium Page
-    When the user selects planet on the dropdown menu
-    When the user selects moon on the dropdown menu
+    When the user navigates to moon on the dropdown menu
     When the user enters "<moon_name>" in the moon name bar
     When the user enters "<planet_id>" in the orbited planet id bar
     When the user adds "<image_src>" in the add image file button
@@ -49,6 +50,7 @@ Feature: moonDeletionFeature
       | 12        | 3         |src\test\resources\Celestial-Images\moon-1.jpg|
 
   Scenario Outline: Neg - Remove Moon - Deleted Name
+    Given the user is logged in
     Given the user is on the Planetarium Page
     Given the moon "<moon_name>" does not exist in the planetarium
     When the user enters "<moon_name>" in the moon deletion bar
@@ -59,6 +61,7 @@ Feature: moonDeletionFeature
       | Menphina  |
 
   Scenario Outline: Neg - Remove Moon - Invalid Name
+    Given the user is logged in
     Given the user is on the Planetarium Page
     When the user enters "<moon_name>" in the moon deletion bar
     When the user clicks the delete button
@@ -68,6 +71,7 @@ Feature: moonDeletionFeature
       | Lunas     |
 
   Scenario Outline: Neg - Remove Moon - Planet Name
+    Given the user is logged in
     Given the user is on the Planetarium Page
     When the user enters "<moon_name>" in the moon deletion bar
     When the user clicks the delete button
@@ -77,9 +81,9 @@ Feature: moonDeletionFeature
       | Mars      |
 
   Scenario Outline: Neg - Remove Moon - Moon Name is ID that exceeds Highest ID
+    Given the user is logged in
     Given the user is on the Planetarium Page
-    When the user selects planet on the dropdown menu
-    When the user selects moon on the dropdown menu
+    When the user navigates to moon on the dropdown menu
     When the user enters "<moon_name>" in the moon name bar
     When the user enters "<planet_id>" in the orbited planet id bar
     When the user adds "<image_src>" in the add image file button
