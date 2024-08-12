@@ -5,7 +5,7 @@ Feature: PlanetDeletion
 		Given the user is logged in
 
 
-	@SCRUM-TC-82 @JREQ-SCRUM-40
+	@SCRUM-TC-27 @JREQ-SCRUM-40
 	#Positive Scenario
 	Scenario Outline: Planet Remove - Positive Scenario - Pre Existing Name
 		Users should be able to delete existing planets with valid inputs
@@ -20,6 +20,7 @@ Feature: PlanetDeletion
 		| Name  |
 		| Earth |
 
+	@SCRUM-TC-73 @JREQ-SCRUM-57
 	#Negative Scenario
 	Scenario Outline: Neg - Remove Planet - Moon Name is ID that exceeds Highest ID
 		Given the user is on the Planetarium Page
@@ -36,7 +37,7 @@ Feature: PlanetDeletion
 			| planet_name | image_src |
 			| 11     | src\test\resources\Celestial-Images\planet-1.jpg|
 
-
+	@SCRUM-TC-29 @JREQ-SCRUM-43
 	Scenario Outline: (pass) Neg - Remove Planet - Name Does Not Exist
 		Given the user is on the Planetarium Page
 		And A planet named "<Name>" does not exist in the Planetarium homepage
@@ -48,7 +49,7 @@ Feature: PlanetDeletion
 			| Name |
 			| IDontExist |
 
-
+	@SCRUM-TC-31 @JREQ-SCRUM-45
 	Scenario Outline: (pass) Neg - Remove Planet - Name Too Long
 		Given the user is on the Planetarium Page
 		When the user selects planet from the dropdown
@@ -59,6 +60,7 @@ Feature: PlanetDeletion
 			| Name |
 			| You cant name your planet this!|
 
+	@SCRUM-TC-32 @JREQ-SCRUM-46
 	Scenario Outline: (pass) Neg - Remove Planet - Name Exists in Moon
 		Given the user is on the Planetarium Page
 		And a moon name "<Name>" exists in the planetarium
