@@ -25,7 +25,9 @@ public class MoonDeletionSteps {
     }
 
     @When("the user enters {string} in the moon deletion bar")
-    public void the_user_enters_in_the_moon_deletion_bar(String string) { TestRun.planetariumPage.sendDeletionInput(string);}
+    public void the_user_enters_in_the_moon_deletion_bar(String string) {
+        TestRun.planetariumPage.sendDeletionInput(string);
+    }
 
     @When("the user clicks the delete button")
     public void the_user_clicks_the_delete_button() {
@@ -38,7 +40,6 @@ public class MoonDeletionSteps {
         assertFalse("The moon should be deleted", moonExists);
     }
 
-
     @Then("the user was alerted to moon deletion failure")
     public void the_user_was_alerted_to_moon_deletion_failure() {
         Alert wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(3))
@@ -46,7 +47,8 @@ public class MoonDeletionSteps {
         Alert alert = TestRun.driver.switchTo().alert();
         alertText = alert.getText();
         wait.dismiss();
-        Assert.assertTrue("The user is alerted to moon deletion failure", alertText.contains("Failed to delete moon with name"));
+        Assert.assertTrue("The user is alerted to moon deletion failure",
+                alertText.contains("Failed to delete moon with name"));
     }
 
     @Given("a moon name {string} is higher than the highest existing ID")
