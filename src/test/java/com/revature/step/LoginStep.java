@@ -15,7 +15,7 @@ import java.time.Duration;
 public class LoginStep {
 
 
-
+    @Before
     public void aRegisterdUser() {
 
             TestRun.startPage.goToStartPage();
@@ -23,6 +23,16 @@ public class LoginStep {
             TestRun.startPage.sendUsernameInput("Batman and Robin Unite Now!!!!");
             TestRun.startPage.sendPasswordInput("Riddler and Joker Disagree!!!!");
             TestRun.regPage.clickAccountSubmitButton();
+        WebDriverWait wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(3));
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        alert = TestRun.driver.switchTo().alert();
+        String alertText = alert.getText();
+        if (alertText.contains("Account creation failed")) {
+            alert.dismiss();
+        } else {
+            alert.accept();
+        }
+
     }
 
 
@@ -30,7 +40,7 @@ public class LoginStep {
 
     @Given("the username and password were registered")
     public void the_user_is_on_the_Landing_Page() {
-        aRegisterdUser();
+
         TestRun.startPage.goToStartPage();
     }
 

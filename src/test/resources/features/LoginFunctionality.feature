@@ -30,7 +30,7 @@ Feature: LoginFunctionality
 
     Examples:
       | username                        | password                        |
-      | Batman and Robin Unite Now!!!!  | Riddler and Joker Disagree!!!!  |
+      | Batman and Robin Unite Now!!!! | Riddler and Joker Disagree!!!!  |
 
 
   Scenario Outline: Negative scenario - non-matching valid username and valid password (EG)
