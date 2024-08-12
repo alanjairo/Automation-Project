@@ -1,12 +1,15 @@
 @PlanetDeletion
 Feature: PlanetDeletion
 
+	Background:
+		Given the user is logged in
+
 
 	@SCRUM-TC-82 @JREQ-SCRUM-40
 	#Positive Scenario
 	Scenario Outline: Planet Remove - Positive Scenario - Pre Existing Name
 		Users should be able to delete existing planets with valid inputs
-		Given The user is logged in and on the Planetarium homepage
+		Given the user is on the Planetarium Page
 		And A planet name "<Name>" exists in the Planetarium homepage
 		When The user selects planet from the dropdown
 		When the user enters "<Name>" in the planet deletion bar
@@ -32,3 +35,38 @@ Feature: PlanetDeletion
 		Examples:
 			| planet_name | image_src |
 			| 11     | src\test\resources\Celestial-Images\planet-1.jpg|
+
+
+
+	Scenario Outline: (pass) Neg - Remove Planet - Name Does Not Exist
+		Given the user is on the Planetarium Page
+		And A planet named "<Name>" does not exist in the Planetarium homepage
+		When The user selects planet from the dropdown
+		When the user enters "<Name>" in the planet deletion bar
+		And The user clicks the delete button
+		Then the user was alerted to planet deletion failure
+		Examples:
+			| Name |
+			| IDontExist |
+
+
+	Scenario Outline: (pass) Neg - Remove Planet - Name Too Long
+		Given the user is on the Planetarium Page
+		When the user selects planet from the dropdown
+		When the user enters "<Name>" in the planet deletion bar
+		And The user clicks the delete button
+		Then the user was alerted to planet deletion failure
+		Examples:
+			| Name |
+			| You cant name your planet this!|
+
+	Scenario Outline: (pass) Neg - Remove Planet - Name Exists in Moon
+		Given the user is on the Planetarium Page
+		And a moon name "<Name>" exists in the planetarium
+		When The user selects planet from the dropdown
+		When the user enters "<Name>" in the planet deletion bar
+		And The user clicks the delete button
+		Then the user was alerted to planet deletion failure
+		Examples:
+			| Name |
+			| Titan |
