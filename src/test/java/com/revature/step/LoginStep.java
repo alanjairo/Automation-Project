@@ -12,14 +12,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class LoginStep {
-    /*
-     * i put 1 at the end of all of these becuase i forgot what to d when we have
-     * multiple steps
-     */
 
     @Given("the user is on the Landing Page1")
     public void the_user_is_on_the_Landing_Page() {
         TestRun.startPage.goToStartPage();
+    }
+
+    @Given("the user is logged in")
+    public void logged_in() {
+        TestRun.startPage.goToStartPage();
+        TestRun.startPage.sendUsernameInput("user1");
+        TestRun.startPage.sendPasswordInput("password");
+        TestRun.startPage.clickLoginButton();
+        Assert.assertEquals("Home", TestRun.driver.getTitle());
     }
 
     @When("the user enters {string} in the username bar1")
@@ -59,8 +64,4 @@ public class LoginStep {
         }
     }
 
-    @Then("the user is logged in")
-    public void logged_in() {
-        Assert.assertEquals("Home", TestRun.driver.getTitle());
-    }
 }
