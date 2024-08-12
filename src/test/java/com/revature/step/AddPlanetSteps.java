@@ -9,26 +9,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.revature.TestRun;
 
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class AddPlanetSteps {
-    public static String alertText; // placeholder
-
-    private static boolean isLoggedIn = false;
-
-    @Before
-    public void ensureLoggedIn() {
-        if (!isLoggedIn) {
-            TestRun.startPage.goToStartPage();
-            TestRun.startPage.sendUsernameInput("user1");
-            TestRun.startPage.sendPasswordInput("password");
-            TestRun.startPage.clickLoginButton();
-            isLoggedIn = true;
-        }
-    }
+    public static String alertText;
 
     @Given("the user is on the Planetarium Page")
     public void the_user_is_on_the_Planetarium_Page() {
