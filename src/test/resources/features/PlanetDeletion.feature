@@ -26,7 +26,7 @@ Feature: PlanetDeletion
 		When the user enters "<planet_name>" in the planet name input
 		When the user chooses "<image_src>" for the planet image input
 		When the user clicks the Submit Planet button
-		Given a planet name "<planet_name>"  is higher than the highest existing ID
+		Given a planet name "<planet_name>" is an INT higher than the highest existing ID
 		When a planet name "<planet_name>" exists in the planetarium
 		When the user enters "<planet_name>" in the planet deletion bar
 		When the user clicks the delete button
