@@ -23,11 +23,11 @@ Feature: PlanetDeletion
 	#Negative Scenario
 	Scenario Outline: Neg - Remove Planet - Moon Name is ID that exceeds Highest ID
 		Given the user is on the Planetarium Page
-		When the user selects planet on the dropdown menu
+		When the user selects planet from the dropdown
 		When the user enters "<planet_name>" in the planet name input
 		When the user chooses "<image_src>" for the planet image input
 		When the user clicks the Submit Planet button
-		Given a planet name "<planet_name>"  is higher than the highest existing ID
+		Given a planet name "<planet_name>" is an INT higher than the highest existing ID
 		When a planet name "<planet_name>" exists in the planetarium
 		When the user enters "<planet_name>" in the planet deletion bar
 		When the user clicks the delete button
