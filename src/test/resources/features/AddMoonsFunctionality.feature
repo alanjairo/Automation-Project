@@ -1,5 +1,5 @@
-@AddMoonFunctionality
-Feature: AddMoonFunctionality
+@AddMoonsFunctionality
+Feature: AddMoonsFunctionality
 
   #Positive Scenarios
   @SCRUM-TC-33 @JREQ-SCRUM-49
