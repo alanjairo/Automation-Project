@@ -16,7 +16,7 @@ Feature: PlanetDeletion
 		And The user clicks the delete button
 		Then The planetarium web app should alert that "<Name>" has been deleted
 
-	Examples: 
+	Examples: 2
 		| Name  |
 		| Earth |
 
@@ -24,10 +24,10 @@ Feature: PlanetDeletion
 	Scenario Outline: Neg - Remove Planet - Moon Name is ID that exceeds Highest ID
 		Given the user is on the Planetarium Page
 		When the user selects planet on the dropdown menu
-		When the user selects moon on the dropdown menu
-		When the user enters "<planet_name>" in the moon name bar
-		When the user adds "<image_src>" in the add image file button
-		When the user clicks submit moon button
+		When the user enters "<planet_name>" in the planet name input
+		When the user chooses "<image_src>" for the planet image input
+		When the user clicks the Submit Planet button
+		Given a planet name "<planet_name>"  is higher than the highest existing ID
 		When a planet name "<planet_name>" exists in the planetarium
 		When the user enters "<planet_name>" in the planet deletion bar
 		When the user clicks the delete button

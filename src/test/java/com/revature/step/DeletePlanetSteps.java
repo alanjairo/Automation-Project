@@ -20,28 +20,19 @@ public class DeletePlanetSteps {
 
     public static String alertText;
 
-    private static boolean isLoggedIn = false;
-
-    @Before
-    public void ensureLoggedIn() {
-        if(!isLoggedIn) {
-            TestRun.startPage.goToStartPage();
-            TestRun.startPage.sendPasswordInput("Batman");
-            TestRun.startPage.sendPasswordInput("I am the night");
-            TestRun.startPage.clickLoginButton();
-            isLoggedIn = true;
-        }
-    }
-
-//    @Given("The user is logged in and on the Planetarium homepage")
-//    public void the_user_is_logged_in_and_on_the_Planetarium_homepage() {
-//        // Write code here that turns the phrase above into concrete actions
-//        TestRun.startPage.goToStartPage();
-//        TestRun.startPage.sendUsernameInput("Batman");
-//        TestRun.startPage.sendPasswordInput("I am the night");
-//        TestRun.startPage.clickLoginButton();
-//        TestRun.planetariumPage.goToHomePage();
+//    private static boolean isLoggedIn = false;
+//
+//    @Before
+//    public void ensureLoggedIn() {
+//        if(!isLoggedIn) {
+//            TestRun.startPage.goToStartPage();
+//            TestRun.startPage.sendPasswordInput("Batman");
+//            TestRun.startPage.sendPasswordInput("I am the night");
+//            TestRun.startPage.clickLoginButton();
+//            isLoggedIn = true;
+//        }
 //    }
+
 
     @Given("A planet name {string} exists in the Planetarium homepage")
     public void a_planet_name_exists_in_the_Planetarium_homepage(String string) {
@@ -71,7 +62,6 @@ public class DeletePlanetSteps {
         // Write code here that turns the phrase above into concrete actions
         Assert.assertFalse(TestRun.planetariumPage.verifyPlanetExists(string));
     }
-
     @Then("the user was alerted to planet deletion failure")
     public void the_user_was_alerted_to_planet_deletion_failure() {
         Alert wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(3))
@@ -84,8 +74,14 @@ public class DeletePlanetSteps {
 
     @When("a planet name {string} exists in the planetarium")
     public void a_planet_name_exists_in_the_planetarium(String string) {
-        boolean planetExists = TestRun.planetariumPage.verifyMoonExists(string);
-        assertTrue("The planet " + string + "exists.", planetExists);
+        boolean planetExists = TestRun.planetariumPage.verifyPlanetExists(string);
+        assertTrue("The planet " + string + " exists.", planetExists);
+    }
+
+    @Given("a planet name {string}  is higher than the highest existing ID")
+    public void a_planet_name_is_higher_than_the_highest_existing_ID(String string) {
+        boolean highestExists = TestRun.planetariumPage.verifyHighestPlanetElement(string);
+        assertTrue("The moon with the highest ID " + string + " exists.", highestExists);
     }
 
     @Given("A planet named {string} does not exist in the Planetarium homepage")
