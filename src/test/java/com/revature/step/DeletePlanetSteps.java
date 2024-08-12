@@ -71,6 +71,7 @@ public class DeletePlanetSteps {
         // Write code here that turns the phrase above into concrete actions
         Assert.assertFalse(TestRun.planetariumPage.verifyPlanetExists(string));
     }
+
     @Then("the user was alerted to planet deletion failure")
     public void the_user_was_alerted_to_planet_deletion_failure() {
         Alert wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(3))
