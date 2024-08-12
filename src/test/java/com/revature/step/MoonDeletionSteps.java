@@ -51,8 +51,8 @@ public class MoonDeletionSteps {
                 alertText.contains("Failed to delete moon with name"));
     }
 
-    @Given("a moon name {string} is higher than the highest existing ID")
-    public void a_moon_name_is_higher_than_the_highest_existing_ID(String string) {
+    @Given("a moon name {string} is an INT higher than the highest existing ID")
+    public void a_moon_name_is_an_int_higher_than_the_highest_existing_ID(String string) {
         boolean highestExists = TestRun.planetariumPage.verifyHighestMoonElement(string);
         assertTrue("The moon with the highest ID " + string + " exists.", highestExists);
     }
