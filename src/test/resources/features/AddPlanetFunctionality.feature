@@ -2,7 +2,8 @@
 Feature: Add Planet Functionality
 
   # POSITIVE SCENARIOS
-  Scenario Outline: (pass) Pos - Add Planet - Name Unique - Pic Valid
+  @SCRUM-TC-15 @JREQ-SCRUM-25
+  Scenario Outline: Pos - Add Planet - Name Unique - Pic Valid
     Given the user is logged in
     And a planet named "<planetName>" does not exist in the planetarium
     When the user selects planet from the dropdown
@@ -15,7 +16,8 @@ Feature: Add Planet Functionality
       | planetName                     | planetImage                                      |
       | I am the planet named Mars!!!! | src/test/resources/Celestial-Images/planet-2.jpg |
 
-  Scenario Outline: (fail) Pos - Add Planet - Name Unique - Pic Empty
+  @SCRUM-TC-16 @JREQ-SCRUM-26
+  Scenario Outline: Pos - Add Planet - Name Unique - Pic Empty
     Given the user is logged in
     And a planet named "<planetName>" does not exist in the planetarium
     When the user selects planet from the dropdown
@@ -28,7 +30,8 @@ Feature: Add Planet Functionality
       | I am the planet named Venus!!! |
 
   # NEGATIVE SCENARIOS - NAME NOT UNIQUE
-  Scenario Outline: (pass) Neg - Add Planet - Name Not Unique (planet) - Pic Valid
+  @SCRUM-TC-17 @JREQ-SCRUM-28
+  Scenario Outline: Neg - Add Planet - Name Not Unique (planet) - Pic Valid
     Given the user is logged in
     And a planet named "<planetName>" exists in the planetarium
     When the user selects planet from the dropdown
@@ -41,7 +44,8 @@ Feature: Add Planet Functionality
       | planetName          | planetImage                                      |
       | ThisNameTakenPlanet | src/test/resources/Celestial-Images/planet-1.jpg |
 
-  Scenario Outline: (fail) Neg - Add Planet - Name Not Unique (moon) - Pic Valid
+	@SCRUM-TC-24 @JREQ-SCRUM-35
+  Scenario Outline: Neg - Add Planet - Name Not Unique (moon) - Pic Valid
     Given the user is logged in
     And a moon name "<planetName>" exists in the planetarium
     When the user selects planet from the dropdown
@@ -55,7 +59,8 @@ Feature: Add Planet Functionality
       | planetName        | planetImage                                      |
       | ThisNameTakenMoon | src/test/resources/Celestial-Images/planet-1.jpg |
 
-  Scenario Outline: (fail) Neg - Add Planet - Name Not Unique (planet) - Pic Empty
+  @SCRUM-TC-19 @JREQ-SCRUM-30
+  Scenario Outline: Neg - Add Planet - Name Not Unique (planet) - Pic Empty
     Given the user is logged in
     And a planet named "<planetName>" exists in the planetarium
     When the user selects planet from the dropdown
@@ -67,7 +72,8 @@ Feature: Add Planet Functionality
       | planetName          |
       | ThisNameTakenPlanet |
 
-  Scenario Outline: (fail) Neg - Add Planet - Name Not Unique (moon) - Pic Empty
+	@SCRUM-TC-26 @JREQ-SCRUM-37
+  Scenario Outline: Neg - Add Planet - Name Not Unique (moon) - Pic Empty
     Given the user is logged in
     And a moon name "<planetName>" exists in the planetarium
     When the user selects planet from the dropdown
@@ -81,7 +87,8 @@ Feature: Add Planet Functionality
       | ThisNameTakenMoon |
 
   # NEGATIVE SCENARIOS - NAME TOO LONG
-  Scenario Outline: (pass) Neg - Add Planet - Name Too Long - Pic Valid
+  @SCRUM-TC-18 @JREQ-SCRUM-29
+  Scenario Outline: Neg - Add Planet - Name Too Long - Pic Valid
     Given the user is logged in
     And a planet named "<planetName>" does not exist in the planetarium
     When the user selects planet from the dropdown
@@ -95,8 +102,8 @@ Feature: Add Planet Functionality
       | planetName                      | planetImage                                      |
       | Name Too Long Picture Valid++++ | src/test/resources/Celestial-Images/planet-1.jpg |
 
-  Scenario Outline: (fail) Neg - Add Planet - Name Too Long - Pic Empty
-
+  @SCRUM-TC-20 @JREQ-SCRUM-31
+  Scenario Outline: Neg - Add Planet - Name Too Long - Pic Empty
     Given the user is logged in
     And a planet named "<planetName>" does not exist in the planetarium
     When the user selects planet from the dropdown
@@ -110,7 +117,8 @@ Feature: Add Planet Functionality
       | Name Too Long Picture Valid++++ |
 
   # NEGATIVE SCENARIOS - Picture Invalid (type)
-  Scenario Outline: (fail) Neg - Add Planet - Name Unique - Pic Invalid (type)
+	@SCRUM-TC-83 @JREQ-SCRUM-108
+  Scenario Outline: Neg - Add Planet - Name Unique - Pic Invalid (type)
 
     Given the user is logged in
     And a planet named "<planetName>" does not exist in the planetarium
@@ -122,10 +130,11 @@ Feature: Add Planet Functionality
     And a planet named "<planetName>" does not exist in the planetarium
 
     Examples:
-      | planetName | planetImage                                        |
-      | UniqueName | src/test/resources/Celestial-Images/notAnImage.txt |
+      | planetName  | planetImage                                        |
+      | UniqueName1 | src/test/resources/Celestial-Images/notAnImage.txt |
 
-  Scenario Outline: (pass) Neg - Add Planet - Name Not Unique (Planet) - Pic Invalid (type)
+	@SCRUM-TC-84 @JREQ-SCRUM-110
+  Scenario Outline: Neg - Add Planet - Name Not Unique (Planet) - Pic Invalid (type)
 
     Given the user is logged in
     And a planet named "<planetName>" exists in the planetarium
@@ -139,7 +148,8 @@ Feature: Add Planet Functionality
       | planetName          | planetImage                                        |
       | ThisNameTakenPlanet | src/test/resources/Celestial-Images/notAnImage.txt |
 
-  Scenario Outline: (fail) Neg - Add Planet - Name Not Unique (Moon) - Pic Invalid (type)
+	@SCRUM-TC-85 @JREQ-SCRUM-109
+  Scenario Outline: Neg - Add Planet - Name Not Unique (Moon) - Pic Invalid (type)
 
     Given the user is logged in
     And a moon name "<planetName>" exists in the planetarium
@@ -151,10 +161,11 @@ Feature: Add Planet Functionality
     And a planet named "<planetName>" does not exist in the planetarium
 
     Examples:
-      | planetName          | planetImage                                        |
-      | ThisNameTakenPlanet | src/test/resources/Celestial-Images/notAnImage.txt |
+      | planetName        | planetImage                                        |
+      | ThisNameTakenMoon | src/test/resources/Celestial-Images/notAnImage.txt |
 
-  Scenario Outline: (pass) Neg - Add Planet - Name Too Long - Pic Invalid (type)
+	@SCRUM-TC-86 @JREQ-SCRUM-111
+  Scenario Outline: Neg - Add Planet - Name Too Long - Pic Invalid (type)
     Given the user is logged in
     And a planet named "<planetName>" does not exist in the planetarium
     When the user selects planet from the dropdown
@@ -169,7 +180,8 @@ Feature: Add Planet Functionality
       | Name Too Long Picture Invalid++ | src/test/resources/Celestial-Images/notAnImage.txt |
 
   # NEGATIVE SCENARIOS - Picture Invalid (size)
-  Scenario Outline: (pass) Neg - Add Planet - Name Unique - Pic Invalid (size)
+	@SCRUM-TC-21 @JREQ-SCRUM-32
+  Scenario Outline: Neg - Add Planet - Name Unique - Pic Invalid (size)
 
     Given the user is logged in
     And a planet named "<planetName>" does not exist in the planetarium
@@ -181,10 +193,11 @@ Feature: Add Planet Functionality
     And a planet named "<planetName>" does not exist in the planetarium
 
     Examples:
-      | planetName | planetImage                                                     |
-      | UniqueName | src/test/resources/Celestial-Images/Dark.Souls.full.2068236.jpg |
+      | planetName  | planetImage                                                     |
+      | UniqueName2 | src/test/resources/Celestial-Images/Dark.Souls.full.2068236.jpg |
 
-  Scenario Outline: (pass) Neg - Add Planet - Name Not Unique (Planet) - Pic Invalid (size)
+	@SCRUM-TC-22 @JREQ-SCRUM-33
+  Scenario Outline: Neg - Add Planet - Name Not Unique (Planet) - Pic Invalid (size)
 
     Given the user is logged in
     And a planet named "<planetName>" exists in the planetarium
@@ -198,7 +211,8 @@ Feature: Add Planet Functionality
       | planetName          | planetImage                                                     |
       | ThisNameTakenPlanet | src/test/resources/Celestial-Images/Dark.Souls.full.2068236.jpg |
 
-  Scenario Outline: (pass) Neg - Add Planet - Name Not Unique (Moon) - Pic Invalid (size)
+	@SCRUM-TC-25 @JREQ-SCRUM-36
+  Scenario Outline: Neg - Add Planet - Name Not Unique (Moon) - Pic Invalid (size)
 
     Given the user is logged in
     And a moon name "<planetName>" exists in the planetarium
@@ -210,10 +224,11 @@ Feature: Add Planet Functionality
     And a planet named "<planetName>" does not exist in the planetarium
 
     Examples:
-      | planetName          | planetImage                                                     |
-      | ThisNameTakenPlanet | src/test/resources/Celestial-Images/Dark.Souls.full.2068236.jpg |
+      | planetName        | planetImage                                                     |
+      | ThisNameTakenMoon | src/test/resources/Celestial-Images/Dark.Souls.full.2068236.jpg |
 
-  Scenario Outline: (pass) Neg - Add Planet - Name Too Long - Pic Invalid (size)
+	@SCRUM-TC-23 @JREQ-SCRUM-34
+  Scenario Outline: Neg - Add Planet - Name Too Long - Pic Invalid (size)
     Given the user is logged in
     And a planet named "<planetName>" does not exist in the planetarium
     When the user selects planet from the dropdown

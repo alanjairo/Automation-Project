@@ -1,6 +1,7 @@
 package com.revature.step;
 
 import com.revature.TestRun;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,8 +14,33 @@ import java.time.Duration;
 
 public class LoginStep {
 
-    @Given("the user is on the Landing Page1")
+
+    @Before
+    public void aRegisterdUser() {
+
+            TestRun.startPage.goToStartPage();
+            TestRun.startPage.clickCreateAccountLink();
+            TestRun.startPage.sendUsernameInput("Batman and Robin Unite Now!!!!");
+            TestRun.startPage.sendPasswordInput("Riddler and Joker Disagree!!!!");
+            TestRun.regPage.clickAccountSubmitButton();
+        WebDriverWait wait = new WebDriverWait(TestRun.driver, Duration.ofSeconds(3));
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        alert = TestRun.driver.switchTo().alert();
+        String alertText = alert.getText();
+        if (alertText.contains("Account creation failed")) {
+            alert.dismiss();
+        } else {
+            alert.accept();
+        }
+
+    }
+
+
+
+
+    @Given("the username and password were registered")
     public void the_user_is_on_the_Landing_Page() {
+
         TestRun.startPage.goToStartPage();
     }
 
@@ -28,8 +54,10 @@ public class LoginStep {
         Assert.assertEquals("Home", TestRun.driver.getTitle());
     }
 
+
     @When("the user enters {string} in the username bar1")
     public void the_user_enters_in_the_username_bar(String string) {
+        System.out.println(string);
         TestRun.startPage.sendUsernameInput(string);
     }
 
