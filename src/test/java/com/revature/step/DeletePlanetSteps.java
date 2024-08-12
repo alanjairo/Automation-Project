@@ -70,9 +70,13 @@ public class DeletePlanetSteps {
 
     @When("a planet name {string} exists in the planetarium")
     public void a_planet_name_exists_in_the_planetarium(String string) {
-        boolean planetExists = TestRun.planetariumPage.verifyMoonExists(string);
-        assertTrue("The planet " + string + "exists.", planetExists);
+        boolean planetExists = TestRun.planetariumPage.verifyPlanetExists(string);
+        assertTrue("The planet " + string + " exists.", planetExists);
     }
 
-
+    @Given("a planet name {string}  is higher than the highest existing ID")
+    public void a_planet_name_is_higher_than_the_highest_existing_ID(String string) {
+        boolean highestExists = TestRun.planetariumPage.verifyHighestPlanetElement(string);
+        assertTrue("The moon with the highest ID " + string + " exists.", highestExists);
+    }
 }
