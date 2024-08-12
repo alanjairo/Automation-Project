@@ -71,11 +71,7 @@ public class DeletePlanetSteps {
     @When("a planet name {string} exists in the planetarium")
     public void a_planet_name_exists_in_the_planetarium(String string) {
         boolean planetExists = TestRun.planetariumPage.verifyPlanetExists(string);
-<<<<<<< HEAD
-        assertTrue("The planet " + string + "exists.", planetExists);
-=======
         assertTrue("The planet " + string + " exists.", planetExists);
->>>>>>> main
     }
 
     @Given("a planet name {string}  is higher than the highest existing ID")
