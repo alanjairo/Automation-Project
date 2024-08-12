@@ -26,8 +26,8 @@ Feature: moonDeletionFeature
     When the user clicks the delete button
     Then the moon "<moon_name>" does not exist in the planetarium
     Examples:
-      | moon_name | planet_id | image_src |
-      | Dalamud     | 2         | src\test\resources\Celestial-Images\moon-1.jpg|
+      | moon_name | planet_id | image_src                                      |
+      | Dalamud   | 2         | src\test\resources\Celestial-Images\moon-1.jpg |
 
 
   #Negative Scenario
@@ -57,7 +57,7 @@ Feature: moonDeletionFeature
     Then the user was alerted to moon deletion failure
     Examples:
       | moon_name |
-      | Mars     |
+      | Mars      |
 
   Scenario Outline: Neg - Remove Moon - Moon Name is ID that exceeds Highest ID
     Given the user is on the Planetarium Page
@@ -72,5 +72,5 @@ Feature: moonDeletionFeature
     When the user clicks the delete button
     Then the user was alerted to moon deletion failure
     Examples:
-      | moon_name | planet_id | image_src |
-      | 12     | 2         | src\test\resources\Celestial-Images\moon-1.jpg|
+      | moon_name | planet_id | image_src                                      |
+      | 12        | 2         | src\test\resources\Celestial-Images\moon-1.jpg |

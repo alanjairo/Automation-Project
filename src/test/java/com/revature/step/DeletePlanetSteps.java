@@ -70,7 +70,7 @@ public class DeletePlanetSteps {
 
     @When("a planet name {string} exists in the planetarium")
     public void a_planet_name_exists_in_the_planetarium(String string) {
-        boolean planetExists = TestRun.planetariumPage.verifyMoonExists(string);
+        boolean planetExists = TestRun.planetariumPage.verifyPlanetExists(string);
         assertTrue("The planet " + string + "exists.", planetExists);
     }
 
