@@ -144,9 +144,56 @@ public class PlanetariumPage {
             String xpathExpression = ".//tr[td[1][text()='moon'] and td[3][text()='" + moonName + "']]";
             WebElement row = celestialTable.findElement(By.xpath(xpathExpression));
             return row != null;
+
         } catch (NoSuchElementException ex) {
             return false;
         }
+    }
+
+    public boolean verifyHighestMoonElement(String moonName)
+    {
+        wait.until(ExpectedConditions.visibilityOf(celestialTable));
+        boolean isHigher = false;
+        String xpathExpression = ".//tr[td[1][text()='moon']]";
+        String moonIDPath = "td[2]";
+        List<WebElement> rows = celestialTable.findElements(By.xpath(xpathExpression));
+        if(isNUmber(moonName)) {
+            for (WebElement row : rows) {
+                WebElement moonID = row.findElement(By.xpath(moonIDPath));
+                if (Integer.parseInt(moonName)> Integer.parseInt(moonID.getText()))
+                {
+                    isHigher = true;
+                }
+                else
+                {
+                    isHigher = false;
+                }
+            }
+        }
+        return isHigher;
+    }
+
+    public boolean verifyHighestPlanetElement(String planetName)
+    {
+        wait.until(ExpectedConditions.visibilityOf(celestialTable));
+        boolean isHigher = false;
+        String xpathExpression = ".//tr[td[1][text()='planet']]";
+        String moonIDPath = "td[2]";
+        List<WebElement> rows = celestialTable.findElements(By.xpath(xpathExpression));
+        if(isNUmber(planetName)) {
+            for (WebElement row : rows) {
+                WebElement moonID = row.findElement(By.xpath(moonIDPath));
+                if (Integer.parseInt(planetName)> Integer.parseInt(moonID.getText()))
+                {
+                    isHigher = true;
+                }
+                else
+                {
+                    isHigher = false;
+                }
+            }
+        }
+        return isHigher;
     }
 
     // handle pop up (temp)
@@ -163,5 +210,20 @@ public class PlanetariumPage {
         deleteInput.sendKeys(input);
     }
 
+    public boolean isNUmber(String string){
+
+        boolean validInt = false;
+
+        try
+        {
+            Integer.parseInt(string);
+            validInt = true;
+        }
+        catch(NumberFormatException e)
+        {
+
+        }
+        return validInt;
+    }
 }
 
