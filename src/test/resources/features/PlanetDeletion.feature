@@ -16,7 +16,7 @@ Feature: PlanetDeletion
 		And The user clicks the delete button
 		Then The planetarium web app should alert that "<Name>" has been deleted
 
-	Examples: 2
+	Examples:
 		| Name  |
 		| Earth |
 
